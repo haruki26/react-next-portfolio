@@ -6,15 +6,17 @@
 @layer base {
   :root {
     --foreground: 51, 51, 51;
-    --background: linear-gradient(to bottom, rgb(238, 238, 238), rgb(190, 180, 170));
+    --background-start: 238, 238, 238;
+    --background-end: 190, 180, 170;
 
-      --muted-color: 204, 204, 204;
-      --muted-foreground: 34, 34, 34;
+    --muted: 204, 204, 204;
+    --muted-foreground: 34, 34, 34;
   }
 
   .dark {
     --foreground: 240, 240, 240;
-    --background: linear-gradient(to bottom, rgb(48, 48, 48), rgb(255, 255, 255));
+    --background-start: 48, 48, 48;
+    --background-end: 30, 30, 30;
     
     --muted: 102, 102, 102;
     --muted-foreground: 221, 221, 221;
@@ -23,6 +25,6 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-b from-background-start to-background-end text-foreground;
   }
 }

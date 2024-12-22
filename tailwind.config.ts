@@ -1,3 +1,4 @@
+import { start } from "repl";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,11 +11,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: {
+          start: "rgb(var(--background-start))",
+          end: "rgb(var(--background-end))",
+        },
+        foreground: "rgb(var(--foreground))",
         muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
+          DEFAULT: "rgb(var(--muted))",
+          foreground: "rgb(var(--muted-foreground))",
         }
       },
       fontFamily: {
