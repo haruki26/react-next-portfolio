@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { roboto } from "@/utils/fonts";
 import "./globals.css";
 
-import NavBar from "./_components/NavBar";
+import NavBar from "@/components/NavBar";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",

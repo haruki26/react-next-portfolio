@@ -1,5 +1,6 @@
-import Card from "./_components/Card";
-import SectionTitle from "./_components/SectionTitle";
+import Card from "@/components/Card";
+import SectionTitle from "@/components/SectionTitle";
+
 
 const Page: React.FC = () => {
     return (
