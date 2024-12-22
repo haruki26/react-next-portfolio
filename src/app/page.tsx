@@ -1,5 +1,4 @@
 import Card from "./_components/Card";
-import LinkBtn from "./_components/LinkBtn";
 import SectionTitle from "./_components/SectionTitle";
 
 const Page: React.FC = () => {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { roboto } from "@/utils/fonts";
 import "./globals.css";
-import NavBar from "./_components/NavBar";
 
-const inter = Inter({ subsets: ["latin"] });
+import NavBar from "./_components/NavBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="bg-gradient-to-b from-white to-slate-300">
+      <body className={`${roboto.className}`}>
         <NavBar />
         {children}
       </body>
