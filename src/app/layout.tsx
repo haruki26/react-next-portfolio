@@ -4,6 +4,7 @@ import { Roboto_Serif } from "next/font/google";
 import "./globals.css";
 
 import NavBar from "@/components/NavBar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 
 const roboto = Roboto_Serif({
@@ -26,8 +27,15 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${roboto.variable}`}>
-        <NavBar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={true}
+          storageKey="theme"
+        >
+          <NavBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
