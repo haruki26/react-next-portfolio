@@ -11,6 +11,8 @@
 
     --muted: 204, 204, 204;
     --muted-foreground: 34, 34, 34;
+
+    --shadow-color: 0, 0, 0, 0.3;
   }
 
   .dark {
@@ -20,6 +22,8 @@
     
     --muted: 102, 102, 102;
     --muted-foreground: 221, 221, 221;
+
+    --shadow-color: 255, 255, 255, 0.3;
   }
 }
 

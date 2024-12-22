@@ -11,7 +11,8 @@ const NavBar: React.FC = () => {
     }
 
     return (
-        <div className="sticky top-0 left-0 z-10 h-16 w-full bg-white/75 shadow-md px-3 py-2">
+        <div
+            className="sticky top-0 left-0 z-10 h-16 w-full bg-white/75 shadow-lg shadow-shadowcolor px-3 py-2">
             <div className="h-full flex justify-between items-center">
                 <div className="flex gap-4">
                     <HamburgerBtn isOpen={isOpen} handleOpen={handleOpen} />
