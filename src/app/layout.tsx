@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { roboto } from "@/utils/fonts";
+import { Roboto_Serif } from "next/font/google";
+
 import "./globals.css";
 
 import NavBar from "@/components/NavBar";
 
+
+const roboto = Roboto_Serif({
+    weight: "100",
+    subsets: ["latin"],
+    variable: "--font-roboto",
+    display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${roboto.className}`}>
+      <body className={`${roboto.variable}`}>
         <NavBar />
         {children}
       </body>
