@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import LinkBtn from "../LinkBtn";
 
 type Props = {
@@ -6,9 +7,12 @@ type Props = {
 
 const Card: React.FC<Props> = ({ children }) => {
     return (
-        <div
-        className="rounded-lg bg-[#f5f5f5]/80 px-3 py-4 w-[22rem] h-[14rem]
-                    shadow-md hover:bg-white/95 hover:shadow-lg hover:-translate-y-1 transition duration-300">
+        <div className={clsx([
+            "rounded-lg px-3 py-4 w-[22rem] h-[14rem]",
+            "bg-[#f5f5f5]/80 shadow-md",
+            " transition duration-300",
+            "hover:bg-white/95 hover:shadow-lg hover:-translate-y-1",
+        ])}>
             <div className="h-5/6">
                 {children}
             </div>

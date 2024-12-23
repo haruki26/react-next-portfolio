@@ -18,8 +18,7 @@ const config: Config = {
         muted: {
           DEFAULT: "rgb(var(--muted))",
           foreground: "rgb(var(--muted-foreground))",
-        },
-        shadowcolor: "rgba(var(--shadow-color))"
+        }
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
