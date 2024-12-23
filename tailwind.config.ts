@@ -22,6 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
+        mplus: ["var(--font-mplus)"],
       },
       animation: {
         "floating-slow": "floating-slow 1.8s ease-in-out infinite alternate-reverse",
@@ -30,10 +31,10 @@ const config: Config = {
       keyframes: {
         "floating-slow": {
           "0%": {
-            transform: "translateY(-0.5rem)",
+            transform: "translateY(-0.3rem)",
           },
           "100%": {
-            transform: "translateY(0.5rem)",
+            transform: "translateY(0.7rem)",
           },
         },
         "scale-in-center": {

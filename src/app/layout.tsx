@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Serif } from "next/font/google";
+import { Roboto_Serif, M_PLUS_1p } from "next/font/google";
 
 import "./globals.css";
 
@@ -8,9 +8,16 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 
 const roboto = Roboto_Serif({
-    weight: "100",
+    weight: ["100", "400"],
     subsets: ["latin"],
     variable: "--font-roboto",
+    display: "swap",
+});
+
+const mplus = M_PLUS_1p({
+    weight: ["100", "300", "400"],
+    subsets: ["latin"],
+    variable: "--font-mplus",
     display: "swap",
 });
 
@@ -26,7 +33,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <body className={`${roboto.variable} h-full w-full m-0`}>
+            <body className={`${roboto.variable} ${mplus.variable} h-full w-full m-0`}>
                 <ThemeProvider
                 attribute="class"
                 defaultTheme="light"

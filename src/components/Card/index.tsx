@@ -18,7 +18,7 @@ const Card: React.FC<Props> = ({ children }) => {
             </div>
             <div className="h-1/6 w-fit ml-auto">
                 <LinkBtn href="/about">
-                    <span>more</span>
+                    <span className="font-roboto text-xl">more</span>
                 </LinkBtn>
             </div>
         </div>
