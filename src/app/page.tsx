@@ -17,21 +17,26 @@ const Page: React.FC = () => {
                     "after:animate-scale-in-center",
                 ])}>
                     <h1 className="text-5xl">Welcome!</h1>
-                    <p className="text-xl">I&apos;m Haruki Kubo.</p>
+                    <p className="text-xl animate-fade-in-bottom">I&apos;m Haruki Kubo.</p>
                 </div>
                 <div className={clsx([
                     "flex flex-col gap-3 ",
                     "text-lg text-center font-mplus font-normal tracking-wide",
                 ])}>
-                    <p>このサイトには私の作品をまとめたページや、学びのアウトプットの場としてのブログページがあります。</p>
-                    <p>コンテンツは少ないですが楽しんでいただけると嬉しいです。</p>
+                    <p className="animate-fade-in-bottom">
+                        このサイトには私の作品をまとめたページや、学びのアウトプットの場としてのブログページがあります。
+                    </p>
+                    <p className="animate-fade-in-bottom">
+                        コンテンツは少ないですが楽しんでいただけると嬉しいです。
+                    </p>
                 </div>
                 <div className="flex flex-col gap-0 items-center">
                     <span className="text-sm font-roboto">Scroll down to see more content.</span>
                     <span className={clsx([
                         "animate-floating-slow",
-                        "before:block before:h-5 before:w-5 before:mt-2 before:mx-auto",
-                        "before:border-r-[1.5px] before:border-b-[1.5px] before:border-black transform before:rotate-45",
+                        "before:block before:h-5 before:w-5 before:mt-3 before:mx-auto",
+                        "before:border-r-[1.5px] before:border-b-[1.5px] before:border-black",
+                        "before:transform before:rotate-45 before:translate-y-5"
                     ])} />
                 </div>
             </div>
@@ -41,13 +46,19 @@ const Page: React.FC = () => {
                         <SectionTitle title="About" />
                         <Card>
                             <div className="w-full h-full flex flex-col gap-2 items-center">
-                                <div className="w-full h-fit flex gap-2 items-center">
-                                    <div className="w-fit h-fit rounded-xl bg-gray-300/60">
-                                        <Image src={"/my_icon.svg"} alt="icon" width={80} height={80} />
+                                <div className="w-full h-fit flex px-2 gap-8 items-center">
+                                    <Image
+                                        src={"/my_icon.svg"}
+                                        alt="icon" 
+                                        width={100}
+                                        height={100}
+                                        className="rounded-xl bg-zinc-300/80 w-20"
+                                    />
+                                    <div className="flex flex-col gap-1 items-start font-mplus">
+                                        
                                     </div>
-                                    <p>久保陽生</p>
                                 </div>
-                                <p className="text-3xl">
+                                <p className="text-2xl">
                                     This is a simple Next.js app with Tailwind CSS.
                                 </p>
                             </div>

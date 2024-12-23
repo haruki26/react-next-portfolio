@@ -27,14 +27,15 @@ const config: Config = {
       animation: {
         "floating-slow": "floating-slow 1.8s ease-in-out infinite alternate-reverse",
         "scale-in-center": "scale-in-center 1.5s ease-in-out",
+        "fade-in-bottom": "fade-in-bottom 1.5s ease-in-out both",
       },
       keyframes: {
         "floating-slow": {
           "0%": {
-            transform: "translateY(-0.3rem)",
+            transform: "translateY(0.5rem)",
           },
           "100%": {
-            transform: "translateY(0.7rem)",
+            transform: "translateY(-0.5rem)",
           },
         },
         "scale-in-center": {
@@ -44,6 +45,16 @@ const config: Config = {
           },
           "100%": {
             transform: "scale(1) translateY(0)",
+            opacity: "1",
+          },
+        },
+        "fade-in-bottom": {
+          "0%": {
+            transform: "translateY(0.5rem)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
             opacity: "1",
           },
         },
