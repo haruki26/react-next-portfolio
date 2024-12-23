@@ -4,6 +4,7 @@ import { useState } from "react";
 import HamburgerBtn from "../HamburgerBtn";
 import clsx from "clsx";
 
+
 const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 

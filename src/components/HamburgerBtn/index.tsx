@@ -13,7 +13,7 @@ const HamburgerBtn: React.FC<Props> = ({ isOpen, handleOpen }) => {
                 "w-8 h-0.5 bg-black transition duration-500 ease-in-out",
                 isOpen && "translate-y-2.5 rotate-45",
             )}/>
-            <div  className={cn(
+            <div className={cn(
                 "w-8 h-0.5 bg-black transition duration-500 ease-in-out",
                 isOpen && "opacity-0",
             )}/>

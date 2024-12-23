@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <body className={`${roboto.variable}`}>
+            <body className={`${roboto.variable} h-full w-full m-0`}>
                 <ThemeProvider
                 attribute="class"
                 defaultTheme="light"
@@ -34,7 +34,9 @@ export default function RootLayout({
                 storageKey="theme"
                 >
                 <NavBar />
-                {children}
+                <main className="h-fit px-2 py-3">
+                    {children}
+                </main>
                 </ThemeProvider>
             </body>
         </html>

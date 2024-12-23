@@ -7,9 +7,9 @@
   :root {
     --foreground: 51, 51, 51;
     --background-start: 238, 238, 238;
-    --background-end: 190, 180, 170;
+    --background-end: 204, 204, 204;
 
-    --muted: 204, 204, 204;
+    --muted: 119, 119, 119;
     --muted-foreground: 34, 34, 34;
   }
 

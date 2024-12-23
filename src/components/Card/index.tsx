@@ -8,12 +8,12 @@ type Props = {
 const Card: React.FC<Props> = ({ children }) => {
     return (
         <div className={clsx([
-            "rounded-lg px-3 py-4 w-[22rem] h-[14rem]",
-            "bg-[#f5f5f5]/80 shadow-md",
-            " transition duration-300",
-            "hover:bg-white/95 hover:shadow-lg hover:-translate-y-1",
+            "rounded-lg px-3 py-4 w-80 h-52",
+            "bg-[#beb4aa]/30 shadow-md",
+            "transition duration-300",
+            "hover:bg-[#beb4aa]/50 hover:shadow-xl hover:scale-[1.01]",
         ])}>
-            <div className="h-5/6">
+            <div className="h-5/6 overflow-hidden">
                 {children}
             </div>
             <div className="h-1/6 w-fit ml-auto">

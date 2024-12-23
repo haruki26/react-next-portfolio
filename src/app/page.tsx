@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Card from "@/components/Card";
 import SectionTitle from "@/components/SectionTitle";
 import clsx from "clsx";
@@ -5,38 +7,49 @@ import clsx from "clsx";
 
 const Page: React.FC = () => {
     return (
-        <div>
-            <div className="h-fit p-2">
-                <div className="w-full flex flex-col gap-10 px-4 py-8">
-                    <h1 className={clsx([
-                        "text-7xl font-roboto text-center",
-                        "after:block after:mt-3 after:mx-auto after:h-[1px] after:w-[19rem] after:bg-slate-800/70",
-                    ])}>
-                        Welcome!
-                    </h1>
-                    <p className="text-2xl">
-                        This is a simple Next.js app with Tailwind CSS.
-                    </p>
-                    <p className={clsx([
-                        "text-xl text-center",
-                        "after:block after:h-5 after:w-5 after:mx-auto after:mt-7",
-                        "after:border-b-[1.5px] after:border-r-[1.5px] after:border-black after:transform after:rotate-45",
-                    ])}>
+        <div className="flex flex-col items-center">
+            <div className={clsx([
+                "w-full h-fit flex px-4 py-8 flex-col font-roboto gap-10 items-center",
+            ])}>
+                <h1 className={clsx([
+                    "text-5xl text-center py-10",
+                    "after:block after:mt-5 after:mx-auto after:h-[1px] after:w-full after:bg-slate-800/70",
+                    "after:animate-scale-in-center",
+                ])}>
+                    Welcome!
+                </h1>
+                <div className={clsx([
+                    "text-lg text-center font-roboto font-semibold",
+                    "flex flex-col gap-0",
+                ])}>
+                    <p>I&apos;m Haruki Kubo.</p>
+                    <p>
                         Scroll down to see more content.
                     </p>
                 </div>
-                <div className="mt-10 w-full flex flex-col">
-                    <section>
+                <span className={clsx([
+                    "animate-floating-slow",
+                    "before:block before:h-5 before:w-5 before:mt-2 before:mx-auto",
+                    "before:border-r-[1.5px] before:border-b-[1.5px] before:border-black transform before:rotate-45",
+                ])} />
+            </div>
+            <div className="mt-10 w-full flex flex-col">
+                <section>
+                    <div className="flex flex-col gap-5 items-center">
                         <SectionTitle title="About" />
-                        <div className="flex flex-col items-center px-1 py-3 gap-4">
-                            <Card>
+                        <Card>
+                            <div className="w-full h-full flex flex-col gap-2 items-center">
+                                <div className="w-full">
+                                    <Image src={"/icon.svg"} alt="icon" width={100} height={100} />
+
+                                </div>
                                 <p className="text-3xl">
                                     This is a simple Next.js app with Tailwind CSS.
                                 </p>
-                            </Card>
-                        </div>
-                    </section>
-                </div>
+                            </div>
+                        </Card>
+                    </div>
+                </section>
             </div>
         </div>
     );
