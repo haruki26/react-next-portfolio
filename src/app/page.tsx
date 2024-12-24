@@ -1,8 +1,14 @@
 import Image from "next/image";
 
+import { LiaGrinSolid } from "react-icons/lia";
+
 import Card from "@/components/Card";
 import SectionTitle from "@/components/SectionTitle";
 import clsx from "clsx";
+import IconAndStr from "@/components/IconAndStr";
+import { BiLogoPython, BiLogoReact, BiLogoTypescript } from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiLangchain } from "react-icons/si";
 
 
 const Page: React.FC = () => {
@@ -40,27 +46,70 @@ const Page: React.FC = () => {
                     ])} />
                 </div>
             </div>
-            <div className="mt-10 w-full flex flex-col">
+            <div className="mt-10 w-full flex flex-col gap-10 justify-center">
                 <section>
                     <div className="flex flex-col gap-5 items-center">
                         <SectionTitle title="About" />
                         <Card>
-                            <div className="w-full h-full flex flex-col gap-2 items-center">
-                                <div className="w-full h-fit flex px-2 gap-8 items-center">
+                            <div className="px-3 py-2 flex flex-col gap-1 items-center">
+                                <div className="w-full h-fit flex px-1 gap-4 items-center">
                                     <Image
                                         src={"/my_icon.svg"}
                                         alt="icon" 
                                         width={100}
                                         height={100}
-                                        className="rounded-xl bg-zinc-300/80 w-20"
+                                        className="my-2 rounded-xl bg-zinc-300/80 w-20"
                                     />
-                                    <div className="flex flex-col gap-1 items-start font-mplus">
-                                        
+                                    <div className="flex flex-col gap-2 items-start">
+                                        <IconAndStr>
+                                            <LiaGrinSolid
+                                                size="1.6rem"
+                                                color="#0a1228"
+                                                className="mt-[0.1rem]"
+                                            />
+                                            <span className="text-2xl font-mplus tracking-tight">
+                                                久保 陽生
+                                            </span>
+                                        </IconAndStr>
+                                        <div className="flex gap-1 items-center">
+                                            <BiLogoTypescript size="1.9rem" color="#0a1228" />
+                                            <BiLogoReact size="1.9rem" color="#0a1228" className="mt-[0.1rem]" />
+                                            <TbBrandNextjs size="1.9rem" color="#0a1228" />
+                                            <BiLogoPython size="1.9rem" color="#0a1228" />
+                                            <SiLangchain size="1.9rem" color="#0a1228" />
+                                        </div>
                                     </div>
                                 </div>
-                                <p className="text-2xl">
-                                    This is a simple Next.js app with Tailwind CSS.
-                                </p>
+                                <div
+                                    className="w-full flex flex-col px-4 gap-0 items-start text-lg tracking-tight font-mplus"
+                                >
+                                    <p>
+                                        PythonやWeb制作、AIについて
+                                        <br />
+                                        学んでいます。
+                                    </p>
+                                    <p>趣味はお菓子作りです。</p>
+                                </div>
+                            </div>
+                        </Card>
+                    </div>
+                </section>
+                <section>
+                    <div className="flex flex-col gap-5 items-center">
+                        <SectionTitle title="Works" />
+                        <Card>
+                            <div className="w-full h-full px-3 py-2 flex flex-col gap-1 items-center justify-center">
+                                <span>準備中...</span>
+                            </div>
+                        </Card>
+                    </div>
+                </section>
+                <section>
+                    <div className="flex flex-col gap-5 items-center">
+                        <SectionTitle title="Blog" />
+                        <Card>
+                            <div className="w-full h-full px-3 py-2 flex flex-col gap-1 items-center justify-center">
+                                <span>準備中...</span>
                             </div>
                         </Card>
                     </div>
