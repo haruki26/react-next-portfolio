@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "xs": "512px",
+      },
       colors: {
         background: {
           start: "rgb(var(--background-start))",
