@@ -12,6 +12,7 @@ const roboto = Roboto_Serif({
     subsets: ["latin"],
     variable: "--font-roboto",
     display: "swap",
+    preload: true,
 });
 
 const mplus = M_PLUS_1p({
@@ -19,6 +20,7 @@ const mplus = M_PLUS_1p({
     subsets: ["latin"],
     variable: "--font-mplus",
     display: "swap",
+    preload: true,
 });
 
 export const metadata: Metadata = {
@@ -40,7 +42,7 @@ export default function RootLayout({
                 enableSystem={true}
                 storageKey="theme"
                 >
-                    <header>
+                    <header className="sticky top-0 left-0 z-10">
                         <NavBar />
                     </header>
                     <main className="h-fit px-2 py-3 relative overflow-x-hidden">

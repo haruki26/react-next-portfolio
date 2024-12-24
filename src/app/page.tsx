@@ -22,17 +22,20 @@ const Page: React.FC = () => {
                 <div className={clsx([
                     "text-center pt-10 pb-12 w-full flex flex-col gap-3 items-center font-roboto font-light tracking-tighter",
                     "after:block after:mt-10 after:mx-auto after:h-[1px] after:w-full after:bg-slate-800/70",
-                    "after:animate-scale-in-center",
+                    "after:animate-scale-in-center after:max-w-screen-md",
+                    "sm:pt-24 sm:pb-28 sm:gap-12 sm:after:mt-24",
                 ])}>
-                    <h1 className="text-5xl tracking-wide">Welcome!</h1>
-                    <p className="text-xl animate-fade-in-bottom">I&apos;m Haruki Kubo.</p>
+                    <h1 className="text-5xl tracking-wide sm:text-8xl">Welcome!</h1>
+                    <p className="text-xl animate-fade-in-bottom sm:text-4xl">I&apos;m Haruki Kubo.</p>
                 </div>
                 <div className={clsx([
-                    "flex flex-col gap-3 ",
+                    "flex flex-col gap-3 max-w-screen-sm",
                     "text-lg text-center font-mplus font-normal tracking-wide",
                 ])}>
                     <p className="animate-fade-in-bottom">
-                        このサイトには私の作品をまとめたページや、学びのアウトプットの場としてのブログページがあります。
+                        このサイトには私の作品をまとめたページや、学びのアウトプットの
+                        {<span className="hidden sm:inline"><br /></span>}
+                        場としてのブログページがあります。
                     </p>
                     <p className="animate-fade-in-bottom">
                         コンテンツは少ないですが楽しんでいただけると嬉しいです。

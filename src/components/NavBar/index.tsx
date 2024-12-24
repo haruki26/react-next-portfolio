@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
 
     return (
         <div className={clsx([
-            "sticky top-0 left-0 z-10 h-16 w-full px-3 py-2",
+            "h-16 w-full px-3 py-2",
             "bg-zinc-100/75 shadow-lg shadow-slate-800/20",
             "dark:bg-zinc-900/75 dark:shadow-slate-100/20",
         ])}>
