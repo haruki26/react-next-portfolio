@@ -1,15 +1,14 @@
 import Image from "next/image";
+import clsx from "clsx";
 
 import { LiaGrinSolid } from "react-icons/lia";
-
-import Card from "@/components/Card";
-import SectionTitle from "@/components/SectionTitle";
-import clsx from "clsx";
-import IconAndStr from "@/components/IconAndStr";
 import { BiLogoPython, BiLogoReact, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiLangchain } from "react-icons/si";
-import LinkBtn from "@/components/LinkBtn";
+
+import Card from "@/components/Card";
+import SectionTitle from "@/components/SectionTitle";
+import IconAndStr from "@/components/IconAndStr";
 import MoreBtn from "@/components/MoreBtn";
 
 
