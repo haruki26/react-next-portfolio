@@ -9,7 +9,7 @@ type Props = {
 
 const LinkBtn: React.FC<Props> = ({ href, children }) => {
     return (
-        <button className="rounded-lg h-fit">
+        <button className="h-fit">
             <Link href={href}>
                 <div className={clsx([
                     "w-28",

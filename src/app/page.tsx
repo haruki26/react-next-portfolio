@@ -9,6 +9,8 @@ import IconAndStr from "@/components/IconAndStr";
 import { BiLogoPython, BiLogoReact, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiLangchain } from "react-icons/si";
+import LinkBtn from "@/components/LinkBtn";
+import MoreBtn from "@/components/MoreBtn";
 
 
 const Page: React.FC = () => {
@@ -22,7 +24,7 @@ const Page: React.FC = () => {
                     "after:block after:mt-10 after:mx-auto after:h-[1px] after:w-full after:bg-slate-800/70",
                     "after:animate-scale-in-center",
                 ])}>
-                    <h1 className="text-5xl">Welcome!</h1>
+                    <h1 className="text-5xl tracking-wide">Welcome!</h1>
                     <p className="text-xl animate-fade-in-bottom">I&apos;m Haruki Kubo.</p>
                 </div>
                 <div className={clsx([
@@ -37,7 +39,9 @@ const Page: React.FC = () => {
                     </p>
                 </div>
                 <div className="flex flex-col gap-0 items-center">
-                    <span className="text-sm font-roboto">Scroll down to see more content.</span>
+                    <span className="text-lg font-roboto tracking-tighter">
+                        Scroll down to see more content.
+                    </span>
                     <span className={clsx([
                         "animate-floating-slow",
                         "before:block before:h-5 before:w-5 before:mt-3 before:mx-auto",
@@ -80,9 +84,7 @@ const Page: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    className="w-full flex flex-col px-4 gap-0 items-start text-lg tracking-tight font-mplus"
-                                >
+                                <div className="w-full flex flex-col px-4 gap-0 items-start text-lg tracking-tight font-mplus">
                                     <p>
                                         PythonやWeb制作、AIについて
                                         <br />
@@ -103,6 +105,7 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
+                    <MoreBtn href="/" />
                 </section>
                 <section>
                     <div className="flex flex-col gap-5 items-center">
@@ -113,6 +116,7 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
+                    <MoreBtn href="/" />
                 </section>
             </div>
         </div>

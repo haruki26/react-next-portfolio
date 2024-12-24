@@ -40,10 +40,12 @@ export default function RootLayout({
                 enableSystem={true}
                 storageKey="theme"
                 >
-                <NavBar />
-                <main className="h-fit px-2 py-3">
-                    {children}
-                </main>
+                    <header>
+                        <NavBar />
+                    </header>
+                    <main className="h-fit px-2 py-3 relative overflow-x-hidden">
+                        {children}
+                    </main>
                 </ThemeProvider>
             </body>
         </html>
