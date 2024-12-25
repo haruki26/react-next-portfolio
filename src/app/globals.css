@@ -12,7 +12,8 @@
     --muted: 119, 119, 119;
     --muted-foreground: 255, 255, 224;
 
-    --card-icon: 10, 18, 40;
+    --card-background: 190, 180, 170;
+    --card-foreground: 10, 18, 40;
   }
 
   .dark {
@@ -23,7 +24,8 @@
     --muted: 102, 102, 102;
     --muted-foreground: 200, 200, 200;
 
-    --card-icon: 238, 233, 223;
+    --card-background: 74, 60, 50;
+    --card-foreground: 238, 233, 223;
   }
 }
 

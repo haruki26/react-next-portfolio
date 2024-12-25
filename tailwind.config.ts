@@ -14,15 +14,18 @@ const config: Config = {
       },
       colors: {
         background: {
-          start: "rgb(var(--background-start))",
-          end: "rgb(var(--background-end))",
+          start: "rgba(var(--background-start))",
+          end: "rgba(var(--background-end))",
         },
-        foreground: "rgb(var(--foreground))",
+        foreground: "rgba(var(--foreground))",
         muted: {
-          DEFAULT: "rgb(var(--muted))",
-          foreground: "rgb(var(--muted-foreground))",
+          DEFAULT: "rgba(var(--muted))",
+          foreground: "rgba(var(--muted-foreground))",
         },
-        icon: "rgb(var(--card-icon))",
+        card: {
+          DEFAULT: "rgba(var(--card-background))",
+          foreground: "rgba(var(--card-foreground))",
+        },
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
