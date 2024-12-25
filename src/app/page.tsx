@@ -13,6 +13,7 @@ import Button from "@/components/Button";
 
 
 const Page: React.FC = () => {
+    
     return (
         <div className="flex flex-col items-center">
             <div className={clsx([
@@ -64,25 +65,24 @@ const Page: React.FC = () => {
                                         alt="icon" 
                                         width={100}
                                         height={100}
-                                        className="my-2 rounded-xl bg-zinc-300/80 w-20"
+                                        className="my-2 rounded-xl bg-zinc-300/80 w-20 dark:bg-zinc-200/90"
                                     />
                                     <div className="flex flex-col gap-2 items-start">
                                         <IconAndStr>
                                             <LiaGrinSolid
                                                 size="1.6rem"
-                                                color="#0a1228"
-                                                className="mt-[0.1rem]"
+                                                className="mt-[0.1rem] inline fill-icon"
                                             />
                                             <span className="text-2xl font-mplus tracking-tight">
                                                 久保 陽生
                                             </span>
                                         </IconAndStr>
                                         <div className="flex gap-1 items-center">
-                                            <BiLogoTypescript size="1.9rem" color="#0a1228" />
-                                            <BiLogoReact size="1.9rem" color="#0a1228" className="mt-[0.1rem]" />
-                                            <TbBrandNextjs size="1.9rem" color="#0a1228" />
-                                            <BiLogoPython size="1.9rem" color="#0a1228" />
-                                            <SiLangchain size="1.9rem" color="#0a1228" />
+                                            <BiLogoTypescript size="1.9rem" className="inline fill-icon" />
+                                            <BiLogoReact size="1.9rem" className="mt-[0.1rem] inline fill-icon" />
+                                            <TbBrandNextjs size="1.9rem" className="inline stroke-icon" />
+                                            <BiLogoPython size="1.9rem" className="inline fill-icon" />
+                                            <SiLangchain size="1.9rem" className="inline fill-icon" />
                                         </div>
                                     </div>
                                 </div>

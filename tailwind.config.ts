@@ -21,7 +21,8 @@ const config: Config = {
         muted: {
           DEFAULT: "rgb(var(--muted))",
           foreground: "rgb(var(--muted-foreground))",
-        }
+        },
+        icon: "rgb(var(--card-icon))",
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
