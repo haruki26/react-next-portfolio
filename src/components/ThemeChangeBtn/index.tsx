@@ -1,0 +1,70 @@
+"use client";
+
+import { cn } from "@/libs/utils";
+import { useTheme } from "next-themes";
+import { useState } from "react";
+import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+
+
+const ThemeChangeBtn: React.FC = () => {
+    const { theme, setTheme } = useTheme();
+    const [ isDark, setIsDark ] = useState<boolean>(theme === "dark");
+
+    const handleClick = () => {
+        setIsDark(!isDark);
+        setTheme(
+            isDark ? "light" : "dark"
+        );
+    }
+
+    return (
+        <div className={cn(
+            "p-px w-[71px] h-[34px] rounded-3xl relative",
+            "border-2 border-spacing-1 border-amber-300 dark:border-amber-200"
+        )}>
+            <input
+                type="checkbox"
+                checked={isDark}
+                readOnly
+                className="hidden"
+            />
+            <label
+                onClick={handleClick}
+                className={cn(
+                    "cursor-pointer absolute top-[1px] left-[3px] w-full h-full z-10",
+                    "after:inline-block after:w-[28px] after:h-[28px] after:rounded-full",
+                    "after:bg-amber-300/30 dark:after:bg-amber-200/30",
+                    "after:transform after:transition after:duration-[400ms] after:ease-in-out",
+                    {
+                        "after:translate-x-0": !isDark,
+                        "after:translate-x-[34px]": isDark,
+                    }
+                )}
+            />
+            <IoSunnyOutline
+                size={26}
+                className={cn(
+                    "absolute top-[2px] left-[3px]",
+                    "transform transition duration-200 ease-in-out",
+                    {
+                        "translate-x-0 opacity-100 scale-100": !isDark,
+                        "translate-x-17 opacity-0 scale-0": isDark,
+                    }
+                )}
+            />
+            <IoMoonOutline
+                size={26}
+                className={cn(
+                    "absolute top-[2px] right-[3px]",
+                    "transform transition duration-200 ease-in-out",
+                    {
+                        "translate-x-0 opacity-100 scale-100": isDark,
+                        "-translate-x-17 opacity-0 scale-0": !isDark,
+                    }
+                )}
+            />
+        </div>
+    );
+}
+
+export default ThemeChangeBtn;
