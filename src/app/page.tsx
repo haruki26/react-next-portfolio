@@ -42,7 +42,8 @@ const Page: React.FC = () => {
                         "animate-floating-slow",
                         "before:block before:h-5 before:w-5 before:mt-3 before:mx-auto",
                         "before:border-r-[1.5px] before:border-b-[1.5px] before:border-black",
-                        "before:transform before:rotate-45 before:translate-y-5"
+                        "before:transform before:rotate-45 before:translate-y-5",
+                        "dark:before:border-zinc-50 dark:before:border-r-[1.6px] dark:before:border-b-[1.6px]",
                     ])} />
                 </div>
             </div>
