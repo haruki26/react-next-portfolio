@@ -1,10 +1,11 @@
 import { cn } from "@/libs/utils";
 
+
 const Footer: React.FC = () => {
     return (
         <div className={cn(
-            "h-16 w-full px-3 py-2 bg-zinc-100/75 shadow-lg shadow-slate-800/20",
-            "dark:bg-zinc-900/75 dark:shadow-slate-100/20",
+            "h-fit w-full px-3 py-2 bg-[#3e2723] text-[#f5f5dc] shadow-[0_-4px_9px_8px_rgba(0,0,0,0.18)]",
+            "dark:bg-[#2e2e2e] dark:shadow-[0_-2px_10px_6px_rgba(221,221,221,0.18)]",
         )}>
             <div className="h-full flex justify-center items-center">
                 <span className="text-lg font-bold">© 2021 My Portfolio</span>

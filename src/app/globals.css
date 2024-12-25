@@ -10,7 +10,7 @@
     --background-end: 204, 204, 204;
 
     --muted: 119, 119, 119;
-    --muted-foreground: 34, 34, 34;
+    --muted-foreground: 255, 255, 224;
   }
 
   .dark {
@@ -19,7 +19,7 @@
     --background-end: 30, 30, 30;
     
     --muted: 102, 102, 102;
-    --muted-foreground: 221, 221, 221;
+    --muted-foreground: 200, 200, 200;
   }
 }
 
