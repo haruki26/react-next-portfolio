@@ -19,7 +19,7 @@ const TopBackBtn: React.FC = () => {
         >
             <BiSolidArrowToTop
                 size={30}
-                className="h-8 transition duration-500 hover:scale-110 hover:-translate-y-1"
+                className="h-8 transition inline fill-white duration-500 hover:scale-110 hover:-translate-y-1"
             />
         </button>
     );

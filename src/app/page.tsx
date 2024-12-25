@@ -65,18 +65,18 @@ const Page: React.FC = () => {
                                         <IconAndStr>
                                             <LiaGrinSolid
                                                 size="1.6rem"
-                                                className="mt-[0.1rem] inline fill-icon"
+                                                className="mt-[0.1rem] inline fill-card-foreground"
                                             />
                                             <span className="text-2xl font-mplus tracking-tight">
                                                 久保 陽生
                                             </span>
                                         </IconAndStr>
                                         <div className="flex gap-1 items-center">
-                                            <BiLogoTypescript size="1.9rem" className="inline fill-icon" />
-                                            <BiLogoReact size="1.9rem" className="mt-[0.1rem] inline fill-icon" />
+                                            <BiLogoTypescript size="1.9rem" className="inline fill-card-foreground" />
+                                            <BiLogoReact size="1.9rem" className="mt-[0.1rem] inline fill-card-foreground" />
                                             <TbBrandNextjs size="1.9rem" className="inline stroke-icon" />
-                                            <BiLogoPython size="1.9rem" className="inline fill-icon" />
-                                            <SiLangchain size="1.9rem" className="inline fill-icon" />
+                                            <BiLogoPython size="1.9rem" className="inline fill-card-foreground" />
+                                            <SiLangchain size="1.9rem" className="inline fill-card-foreground" />
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
-                    <Button href="/">
+                    <Button href="/blog">
                         more
                     </Button>
                 </section>
