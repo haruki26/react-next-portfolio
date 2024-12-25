@@ -5,6 +5,7 @@ import "./globals.css";
 
 import NavBar from "@/components/NavBar";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/Footer";
 
 
 const roboto = Roboto_Serif({
@@ -37,10 +38,10 @@ export default function RootLayout({
         <html lang="ja">
             <body className={`${roboto.variable} ${mplus.variable} h-full w-full m-0`}>
                 <ThemeProvider
-                attribute="class"
-                defaultTheme="light"
-                enableSystem={true}
-                storageKey="theme"
+                    attribute="class"
+                    defaultTheme="light"
+                    enableSystem={true}
+                    storageKey="theme"
                 >
                     <header className="sticky top-0 left-0 z-10">
                         <NavBar />
@@ -48,6 +49,9 @@ export default function RootLayout({
                     <main className="h-fit px-2 py-3 relative overflow-x-hidden">
                         {children}
                     </main>
+                    <footer className="w-full h-fit mt-8">
+                        <Footer />
+                    </footer>
                 </ThemeProvider>
             </body>
         </html>

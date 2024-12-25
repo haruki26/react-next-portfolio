@@ -1,6 +1,6 @@
 import Image from "next/image";
-import clsx from "clsx";
 
+import clsx from "clsx";
 import { LiaGrinSolid } from "react-icons/lia";
 import { BiLogoPython, BiLogoReact, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -9,7 +9,7 @@ import { SiLangchain } from "react-icons/si";
 import Card from "@/components/Card";
 import SectionTitle from "@/components/SectionTitle";
 import IconAndStr from "@/components/IconAndStr";
-import MoreBtn from "@/components/MoreBtn";
+import Button from "@/components/Button";
 
 
 const Page: React.FC = () => {
@@ -33,7 +33,7 @@ const Page: React.FC = () => {
                 ])}>
                     <p className="animate-fade-in-bottom">
                         このサイトには私の作品をまとめたページや、学びのアウトプットの
-                        {<span className="hidden sm:inline"><br /></span>}
+                        <span className="hidden sm:inline"><br /></span>
                         場としてのブログページがあります。
                     </p>
                     <p className="animate-fade-in-bottom">
@@ -107,7 +107,9 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
-                    <MoreBtn href="/" />
+                    <Button href="/">
+                        more
+                    </Button>
                 </section>
                 <section>
                     <div className="flex flex-col gap-5 items-center">
@@ -118,7 +120,9 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
-                    <MoreBtn href="/" />
+                    <Button href="/">
+                        more
+                    </Button>
                 </section>
             </div>
         </div>
