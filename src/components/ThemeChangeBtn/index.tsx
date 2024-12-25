@@ -1,9 +1,10 @@
 "use client";
 
-import { cn } from "@/libs/utils";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+
+import { cn } from "@/libs/utils";
 
 
 const ThemeChangeBtn: React.FC = () => {

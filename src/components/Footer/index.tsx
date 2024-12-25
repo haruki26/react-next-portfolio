@@ -1,5 +1,6 @@
 import { cn } from "@/libs/utils";
 import ThemeChangeBtn from "../ThemeChangeBtn";
+import TopBackBtn from "../TopBackBtn";
 
 
 const Footer: React.FC = () => {
@@ -10,6 +11,7 @@ const Footer: React.FC = () => {
         )}>
             <div className="h-full flex flex-col gap-5 justify-center items-center">
                 <div className="flex gap-2 items-center">
+                    <TopBackBtn />
                     <ThemeChangeBtn />
                 </div>
             </div>
