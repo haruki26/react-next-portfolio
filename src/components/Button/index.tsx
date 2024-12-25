@@ -18,7 +18,8 @@ const Button: React.FC<Props> = ({ children, href }) => {
                     "before:transform before:translate-x-[6px] before:-translate-y-[6px]",
                     "hover:before:translate-x-0 hover:before:translate-y-0",
                     "before:transition before:duration-300",
-                    "sm:w-52 sm:static sm:mx-auto sm:skew-x-0"
+                    "sm:w-52 sm:static sm:mx-auto sm:skew-x-0",
+                    "dark:before:border-slate-300"
                 )}
             >
                 <div className="h-full w-full absolute top-0 left-0">
