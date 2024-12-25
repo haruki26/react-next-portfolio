@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
             "dark:bg-zinc-900/75 dark:shadow-slate-100/20",
         ])}>
             <div className="h-full flex justify-between items-center">
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-center">
                     <HamburgerBtn isOpen={isOpen} handleOpen={handleOpen} />
                     <span className="text-xl font-bold">My Portfolio</span>
                 </div>

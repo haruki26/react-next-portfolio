@@ -8,16 +8,16 @@ type Props = {
 
 const HamburgerBtn: React.FC<Props> = ({ isOpen, handleOpen }) => {
     return (
-        <button type="button" className="flex flex-col gap-2" onClick={handleOpen}>
-            <div className={cn(
+        <button type="button" className="flex flex-col h-fit gap-2" onClick={handleOpen}>
+            <span className={cn(
                 "w-8 h-0.5 bg-black transition duration-500 ease-in-out",
                 isOpen && "translate-y-2.5 rotate-45",
             )}/>
-            <div className={cn(
+            <span className={cn(
                 "w-8 h-0.5 bg-black transition duration-500 ease-in-out",
                 isOpen && "opacity-0",
             )}/>
-            <div className={cn(
+            <span className={cn(
                 "w-8 h-0.5 bg-black transition duration-500 ease-in-out",
                 isOpen && "-translate-y-2.5 -rotate-45",
             )}/>

@@ -20,7 +20,7 @@ const Page: React.FC = () => {
             ])}>
                 <div className={clsx([
                     "text-center pt-10 pb-12 w-full flex flex-col gap-3 items-center font-roboto font-light tracking-tighter",
-                    "after:block after:mt-10 after:mx-auto after:h-[1px] after:w-full after:bg-slate-800/70",
+                    "after:block after:mt-10 after:mx-auto after:h-px after:w-full after:bg-slate-800/70",
                     "after:animate-scale-in-center after:max-w-screen-md",
                     "sm:pt-24 sm:pb-28 sm:gap-12 sm:after:mt-24",
                 ])}>
