@@ -10,6 +10,7 @@ import Card from "@/components/Card";
 import SectionTitle from "@/components/SectionTitle";
 import IconAndStr from "@/components/IconAndStr";
 import Button from "@/components/Button";
+import Hero from "@/components/Hero";
 
 
 const Page: React.FC = () => {
@@ -19,15 +20,7 @@ const Page: React.FC = () => {
             <div className={clsx([
                 "w-full h-fit flex px-4 py-8 flex-col gap-10 items-center",
             ])}>
-                <div className={clsx([
-                    "text-center pt-10 pb-12 w-full flex flex-col gap-3 items-center font-roboto font-light tracking-tighter",
-                    "after:block after:mt-10 after:mx-auto after:h-px after:w-full after:bg-slate-800/70",
-                    "after:animate-scale-in-center after:max-w-screen-md",
-                    "sm:pt-24 sm:pb-28 sm:gap-12 sm:after:mt-24",
-                ])}>
-                    <h1 className="text-5xl tracking-wide sm:text-8xl">Welcome!</h1>
-                    <p className="text-xl animate-fade-in-bottom sm:text-4xl">I&apos;m Haruki Kubo.</p>
-                </div>
+                <Hero title="Welcome!" subTitle="I'm Haruki Kubo." />
                 <div className={clsx([
                     "flex flex-col gap-3 max-w-screen-sm",
                     "text-lg text-center font-mplus font-normal tracking-wide",
