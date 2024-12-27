@@ -4,8 +4,10 @@ import { Roboto_Serif, M_PLUS_1p } from "next/font/google";
 import "./globals.css";
 
 import NavBar from "@/components/NavBar";
-import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/Footer";
+import SideMenu from "@/components/SideMenu";
+import { ThemeProvider } from "@/components/theme-provider";
+import { SideMenuProvider } from "@/components/sidemenu-provider";
 
 
 const roboto = Roboto_Serif({
@@ -43,15 +45,18 @@ export default function RootLayout({
                     enableSystem={true}
                     storageKey="theme"
                 >
-                    <header className="sticky top-0 left-0 z-10">
-                        <NavBar />
-                    </header>
-                    <main className="h-fit px-2 py-3 relative overflow-x-hidden">
-                        {children}
-                    </main>
-                    <footer className="w-full h-fit mt-8">
-                        <Footer />
-                    </footer>
+                    <SideMenuProvider>
+                        <header className="sticky top-0 left-0 z-50">
+                            <NavBar />
+                        </header>
+                        <main className="h-fit px-2 py-3 relative overflow-x-hidden">
+                            {children}
+                        </main>
+                        <footer className="w-full h-fit mt-8 z-40">
+                            <Footer />
+                        </footer>
+                        <SideMenu />
+                    </SideMenuProvider>
                 </ThemeProvider>
             </body>
         </html>
