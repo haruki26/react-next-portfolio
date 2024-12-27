@@ -39,7 +39,7 @@ export default function RootLayout({
             <body className={`${roboto.variable} ${mplus.variable} h-full w-full m-0`}>
                 <ThemeProvider
                     attribute="class"
-                    defaultTheme="dark"
+                    defaultTheme="system"
                     enableSystem={true}
                     storageKey="theme"
                 >

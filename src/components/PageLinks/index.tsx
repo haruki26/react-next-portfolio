@@ -68,16 +68,16 @@ const PageLinks: React.FC<Props> = ({
                         "w-fit h-fit px-1 relative",
                         current === page.href && (
                             [
+                                "before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-10",
                                 "after:absolute after:top-1/2 after:left-0",
-                                "after:h-[4px] after:rounded-md after:w-full after:bg-slate-200",
+                                "after:h-[5px] after:w-full after:rounded-md after:bg-slate-200",
                                 "after:shadow-[0_0_8px_7px_rgba(255,255,255,0.15)]",
-                                "after:transform after:transition after:duration-200 after:ease-in-out",
-                                "after:scale-x-100",
+                                "after:animate-scale-in-center",
                             ]
                         ),
                     )}
                 >
-                    <Link href={page.href}>
+                    <Link href={page.href} passHref={true}>
                         <IconAndStr>
                             {page.icon.type({
                                 ...icon,
