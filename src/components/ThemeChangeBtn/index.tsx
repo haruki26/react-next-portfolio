@@ -1,7 +1,6 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
 import { cn } from "@/libs/utils";
@@ -9,10 +8,9 @@ import { cn } from "@/libs/utils";
 
 const ThemeChangeBtn: React.FC = () => {
     const { theme, setTheme } = useTheme();
-    const [ isDark, setIsDark ] = useState<boolean>(theme === "dark");
+    const isDark = (theme === "dark");
 
     const handleClick = () => {
-        setIsDark(!isDark);
         setTheme(
             isDark ? "light" : "dark"
         );
