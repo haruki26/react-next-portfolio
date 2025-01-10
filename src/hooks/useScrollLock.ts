@@ -11,7 +11,7 @@ type Props = {
     target: RefObject<HTMLElement>;
 }
 
-export const useScrollLock = ({ isLock, target }: Props): undefined => {
+export const useScrollLock = ({ isLock, target }: Props): void => {
     useEffect(() => {
         if (!target.current) return;
 
