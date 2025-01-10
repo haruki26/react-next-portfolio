@@ -1,12 +1,25 @@
 "use client"
 
+import { useState, useEffect } from "react";
+
 import { cn } from "@/libs/utils";
 import PageLinks, { IconSettings } from "../PageLinks";
 import { useSideMenuContext } from "@/contexts";
 
 const SideMenu: React.FC = () => {
     const { isOpen } = useSideMenuContext();
-    if (!isOpen) return null;
+    const [shouldRender, setShouldRender] = useState(isOpen);
+
+    useEffect(() => {
+        if (isOpen) {
+            setShouldRender(true);
+        } else {
+            const timer = setTimeout(() => setShouldRender(false), 500);
+            return () => clearTimeout(timer);
+        }
+    }, [isOpen]);
+
+    if (!shouldRender) return null;
 
     const icon: IconSettings = {
         size: 40,
@@ -15,10 +28,16 @@ const SideMenu: React.FC = () => {
 
     return (
         <div className={cn(
-            "w-full max-w-sm h-svh px-2 py-5 z-10",
-            "bg-background-end flex items-center justify-center"
+            "w-full h-svh fixed top-0 left-0 z-10 bg-slate-700/40 flex",
+            "transition-opacity duration-500 ease-in-out",
+            isOpen ? "opacity-100" : "opacity-0"
         )}>
-            <PageLinks icon={icon} withText />
+            <div className={cn(
+                "w-full max-w-md py-20 bg-background-end shadow-[5px_0_10px_0_rgba(34,34,34,0.2)]",
+                isOpen ? "animate-slide-in-left" : "animate-slide-out-left"
+            )}>
+                <PageLinks icon={icon} withText />
+            </div>
         </div>
     );
 }

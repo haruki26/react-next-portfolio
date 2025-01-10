@@ -52,7 +52,7 @@ export default function RootLayout({
                         <main className="h-fit px-2 py-3 relative overflow-x-hidden">
                             {children}
                         </main>
-                        <footer className="w-full h-fit mt-8 z-40">
+                        <footer className="w-full h-fit mt-8 z-50">
                             <Footer />
                         </footer>
                         <SideMenu />

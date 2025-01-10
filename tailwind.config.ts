@@ -35,6 +35,8 @@ const config: Config = {
         "floating-slow": "floating-slow 1.8s ease-in-out infinite alternate-reverse",
         "scale-in-center": "scale-in-center 1.5s ease-in-out",
         "fade-in-bottom": "fade-in-bottom 1.5s ease-in-out both",
+        "slide-in-left": "slide-in-left 0.5s ease-in-out both",
+        "slide-out-left": "slide-out-left 0.5s ease-in-out both",
       },
       keyframes: {
         "floating-slow": {
@@ -63,6 +65,22 @@ const config: Config = {
           "100%": {
             transform: "translateY(0)",
             opacity: "1",
+          },
+        },
+        "slide-in-left": {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
+        "slide-out-left": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
           },
         },
       },
