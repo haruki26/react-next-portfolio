@@ -14,7 +14,6 @@ import Hero from "@/components/Hero";
 
 
 const Page: React.FC = () => {
-    
     return (
         <div className="flex flex-col items-center">
             <div className={clsx([
@@ -27,11 +26,8 @@ const Page: React.FC = () => {
                 ])}>
                     <p className="animate-fade-in-bottom">
                         このサイトには私の作品をまとめたページや、学びのアウトプットの
-                        <span className="hidden sm:inline"><br /></span>
+                        <br className="hidden sm:inline" />
                         場としてのブログページがあります。
-                    </p>
-                    <p className="animate-fade-in-bottom">
-                        コンテンツは少ないですが楽しんでいただけると嬉しいです。
                     </p>
                 </div>
                 <div className="flex flex-col gap-0 items-center">
@@ -101,7 +97,7 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
-                    <Button href="/">
+                    <Button href="/works">
                         more
                     </Button>
                 </section>
