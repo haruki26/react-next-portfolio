@@ -1,10 +1,19 @@
+import clsx from "clsx";
+
 type Props = {
     children: React.ReactNode;
+    className?: string;
 }
 
-const IconAndStr: React.FC<Props> = ({ children }) => {
+const IconAndStr: React.FC<Props> = ({
+    children,
+    className = "",
+}) => {
     return (
-        <div className="w-fit h-fit flex gap-1 items-center">
+        <div className={clsx(
+            "w-fit h-fit flex items-center",
+            className,
+        )}>
             {children}
         </div>
     );
