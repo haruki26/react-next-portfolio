@@ -11,7 +11,7 @@ import { SideMenuProvider } from "@/components/sidemenu-provider";
 
 
 const roboto = Roboto_Serif({
-    weight: ["100", "400"],
+    weight: ["400", "700"],
     subsets: ["latin"],
     variable: "--font-roboto",
     display: "swap",
@@ -19,7 +19,7 @@ const roboto = Roboto_Serif({
 });
 
 const mplus = M_PLUS_1p({
-    weight: ["100", "300", "400"],
+    weight: ["400", "700"],
     subsets: ["latin"],
     variable: "--font-mplus",
     display: "swap",
