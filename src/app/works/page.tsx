@@ -11,30 +11,30 @@ const Page: React.FC = () => {
                 <span className="font-roboto text-6xl">Works</span>
             </IconAndStr>
             <div className="grid grid-cols-3 grid-rows-1 gap-4">
-                <Card className="grid grid-cols-subgrid gap-2 p-3">
-                    <div className="flex flex-col gap-1 items-center">
-                        <span>準備中`kamakakakak</span>
+                <Card className="grid grid-rows-subgrid row-span-3 gap-2 p-3">
+                    <div className="">
+                        <span className="text-3xl">準備中</span>
                     </div>
-                    <div className="flex flex-col">
-                        <span>content</span>
-                        <span>content</span>
-                    </div>
-                    <span>Im pen.</span>
-                </Card>
-                <Card className="grid grid-cols-subgrid gap-2 p-3">
-                <div className="flex flex-col gap-1 items-center">
-                        <span>準備中...</span>
-                    </div>
-                    <div className="flex flex-col">
+                    <div className="">
+                        <span>contcfsvfs<br />rsbsd<br />rsrvgr</span>
                         <span>content</span>
                     </div>
                     <span>Im pen.</span>
                 </Card>
-                <Card className="grid grid-cols-subgrid gap-2 p-3">
-                <div className="flex flex-col gap-1 items-center">
+                <Card className="grid grid-rows-subgrid row-span-3 gap-2 p-3">
+                    <div className="">
                         <span>準備中...</span>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="">
+                        <span>content</span>
+                    </div>
+                    <span>Im pen.</span>
+                </Card>
+                <Card className="grid grid-rows-subgrid row-span-3 gap-2 p-3">
+                    <div className="">
+                        <span>準備中...</span>
+                    </div>
+                    <div className="">
                         <span>content</span>
                     </div>
                     <span className="text-xl">Im pen.</span>
