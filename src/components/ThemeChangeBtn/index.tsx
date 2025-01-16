@@ -34,10 +34,7 @@ const ThemeChangeBtn: React.FC = () => {
                     "after:inline-block after:w-[28px] after:h-[28px] after:rounded-full",
                     "after:bg-amber-300/30 dark:after:bg-amber-200/30",
                     "after:transform after:transition after:duration-[400ms] after:ease-in-out",
-                    {
-                        "after:translate-x-0": !isDark,
-                        "after:translate-x-[34px]": isDark,
-                    }
+                    isDark ? "after:translate-x-[34px]" : "after:translate-x-0",
                 )}
             />
             <IoSunnyOutline
@@ -45,10 +42,7 @@ const ThemeChangeBtn: React.FC = () => {
                 className={cn(
                     "absolute top-[2px] left-[3px]",
                     "transform transition duration-200 ease-in-out",
-                    {
-                        "translate-x-0 opacity-100 scale-100": !isDark,
-                        "translate-x-17 opacity-0 scale-0": isDark,
-                    }
+                    isDark ? "translate-x-17 opacity-0 scale-0" : "translate-x-0 opacity-100 scale-100"
                 )}
             />
             <IoMoonOutline
@@ -56,10 +50,7 @@ const ThemeChangeBtn: React.FC = () => {
                 className={cn(
                     "absolute top-[2px] right-[3px]",
                     "transform transition duration-200 ease-in-out",
-                    {
-                        "translate-x-0 opacity-100 scale-100": isDark,
-                        "-translate-x-17 opacity-0 scale-0": !isDark,
-                    }
+                    isDark ? "translate-x-0 opacity-100 scale-100" : "translate-x-17 opacity-0 scale-0"
                 )}
             />
         </div>
