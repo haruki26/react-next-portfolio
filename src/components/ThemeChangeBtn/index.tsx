@@ -21,12 +21,6 @@ const ThemeChangeBtn: React.FC = () => {
             "p-px w-[71px] h-[34px] rounded-3xl relative",
             "border-2 border-spacing-1 border-amber-300 dark:border-amber-200"
         )}>
-            <input
-                type="checkbox"
-                checked={isDark}
-                readOnly
-                className="hidden"
-            />
             <label
                 onClick={handleClick}
                 className={cn(
