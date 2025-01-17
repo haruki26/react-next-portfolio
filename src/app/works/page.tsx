@@ -35,10 +35,6 @@ const dummy = [
 const Page: React.FC = () => {
     return (
         <div className="flex flex-col items-center gap-10 my-4">
-            <IconAndStr className="gap-3">
-                <BiBookBookmark size={"3.7rem"} />
-                <span className="font-roboto text-6xl">Works</span>
-            </IconAndStr>
             <CardStack cardContents={dummy} />
         </div>
     );
