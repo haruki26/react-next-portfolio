@@ -11,6 +11,8 @@ import SectionTitle from "@/components/SectionTitle";
 import IconAndStr from "@/components/IconAndStr";
 import Button from "@/components/Button";
 import Hero from "@/components/Hero";
+import Link from "next/link";
+import Arrow from "@/components/Arrow";
 
 
 const Page: React.FC = () => {
@@ -89,30 +91,48 @@ const Page: React.FC = () => {
                     </div>
                 </section>
                 <section>
-                    <div className="flex flex-col gap-5 items-center">
-                        <SectionTitle title="Works" />
-                        <Card>
-                            <div className="w-full h-full px-3 py-2 flex flex-col gap-1 items-center justify-center">
-                                <span>準備中...</span>
-                            </div>
-                        </Card>
+                    <div className="flex flex-col gap-10 items-center">
+                        <div className="flex flex-col gap-5 items-center justify-center">
+                            <SectionTitle title="Works" />
+                            <Card>
+                                <div className="w-full h-full px-3 py-2 flex flex-col gap-1 items-center justify-center">
+                                    <span>準備中...</span>
+                                </div>
+                            </Card>
+                        </div>
+                        <Button>
+                            <Link
+                                href="/works"
+                                className="w-full h-full flex items-center justify-center"
+                            >
+                                <span className="font-roboto text-xl text-muted-foreground font-light tracking-tighter">
+                                    more
+                                </span>
+                            </Link>
+                        </Button>
                     </div>
-                    <Button>
-                        more
-                    </Button>
                 </section>
                 <section>
                     <div className="flex flex-col gap-5 items-center">
-                        <SectionTitle title="Blog" />
-                        <Card>
-                            <div className="w-full h-full px-3 py-2 flex flex-col gap-1 items-center justify-center">
-                                <span>準備中...</span>
-                            </div>
-                        </Card>
+                        <div className="flex flex-col gap-5 items-center">
+                            <SectionTitle title="Blog" />
+                            <Card>
+                                <div className="w-full h-full px-3 py-2 flex flex-col gap-1 items-center justify-center">
+                                    <span>準備中...</span>
+                                </div>
+                            </Card>
+                        </div>
+                        <Button>
+                            <Link
+                                href="/blog"
+                                className="w-full h-full flex items-center justify-center"
+                            >
+                                <span className="font-roboto text-xl text-muted-foreground font-light tracking-tighter">
+                                    more
+                                </span>
+                            </Link>
+                        </Button>
                     </div>
-                    <Button>
-                        more
-                    </Button>
                 </section>
             </div>
         </div>
