@@ -20,8 +20,8 @@ const Page: React.FC = () => {
             <div className={clsx([
                 "w-full h-fit flex px-4 py-8 flex-col gap-10 items-center",
             ])}>
-                <Hero subTitle="I'm Haruki Kubo.">
-                    <h1 className="text-5xl tracking-tighter sm:text-8xl">
+                <Hero describe="プロフィールや作品についてまとめてあります。">
+                    <h1 className="font-roboto font-light text-5xl tracking-tighter sm:text-8xl">
                         Welcome!
                     </h1>
                 </Hero>
