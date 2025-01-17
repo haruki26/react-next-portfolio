@@ -21,8 +21,8 @@ const CardStack: React.FC<Props> = ({ cardContents }) => {
 
     return (
         <div className={cn(
-            "grid grid-rows-9",
-            `grid-cols-1 grid-rows-[repeat(${rowSpan},minmax(0,1fr))] gap-7`,
+            "grid grid-rows-9 py-5",
+            `grid-cols-1 grid-rows-[repeat(${rowSpan},minmax(0,1fr))] gap-10`,
             `md:grid-cols-2 md:grid-rows-[repeat(${rowSpan/2},minmax(0,1fr))]`,
         )}>
             {cardContents.map((content, index) => (
