@@ -1,6 +1,3 @@
-import { BiBookBookmark } from "react-icons/bi";
-import IconAndStr from "@/components/IconAndStr";
-import Card from "@/components/Card";
 import CardStack from "@/components/CardStack";
 
 
