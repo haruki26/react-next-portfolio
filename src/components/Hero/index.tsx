@@ -1,11 +1,15 @@
 import { cn } from "@/libs/utils";
 
+
 type Props = {
-    title: string;
-    subTitle: string;
+    children: React.ReactNode;
+    subTitle?: string | null;
 }
 
-const Hero: React.FC<Props> = ({ title, subTitle }) => {
+const Hero: React.FC<Props> = ({
+    children,
+    subTitle = null,
+}) => {
     return (
         <div className={cn(
             "text-center pt-10 pb-12 w-full flex flex-col gap-7 items-center font-roboto font-light tracking-tighter",
@@ -14,12 +18,12 @@ const Hero: React.FC<Props> = ({ title, subTitle }) => {
             "sm:pt-24 sm:pb-28 sm:gap-12 sm:after:mt-24",
             "dark:after:bg-yellow-400/50",
         )}>
-            <h1 className="text-5xl tracking-tighter sm:text-8xl">
-                {title}
-            </h1>
-            <p className="text-xl animate-fade-in-bottom sm:text-4xl">
-                {subTitle}
-            </p>
+            {children}
+            {subTitle && (
+                <span className="text-xl animate-fade-in-bottom sm:text-4xl">
+                    {subTitle}
+                </span>
+            )}
         </div>
     );
 }
