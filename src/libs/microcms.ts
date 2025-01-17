@@ -8,14 +8,14 @@ import type {
 
 export type Content = {
     title: string;
-    description: string;
+    describe: string;
     content: string;
     thumbnail?: MicroCMSImage | undefined;
     publishedAt: string;
     updatedAt: string;
 } & MicroCMSListContent;
 
-type EndPoint = "works" | "blogs";
+type EndPoint = "works" | "blog";
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
     throw new Error("MICROCMS_SERVICE_DOMAIN is not defined");

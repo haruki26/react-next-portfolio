@@ -7,7 +7,7 @@ import Arrow from "../Arrow";
 
 type Content = {
     title: string;
-    description: string;
+    describe: string;
     link: string;
 }
 
@@ -30,8 +30,8 @@ const CardStack: React.FC<Props> = ({ cardContents }) => {
                     "px-2 py-3 grid grid-rows-subgrid row-span-3 max-w-72 gap-4",
                 )}>
                     <h3 className="font-mplus text-2xl">{content.title}</h3>
-                    <div className="flex gap-0">
-                        <p className="text-xl break-all">{content.description}</p>
+                    <div className="flex gap-0 px-2">
+                        <p className="text-xl break-all">{content.describe}</p>
                     </div>
                     <Link href={content.link} className={clsx(
                         "ml-auto pl-2 pr-3 py-0 pb-1",
