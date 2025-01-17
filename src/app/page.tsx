@@ -12,7 +12,6 @@ import IconAndStr from "@/components/IconAndStr";
 import Button from "@/components/Button";
 import Hero from "@/components/Hero";
 import Link from "next/link";
-import Arrow from "@/components/Arrow";
 
 
 const Page: React.FC = () => {
@@ -21,7 +20,11 @@ const Page: React.FC = () => {
             <div className={clsx([
                 "w-full h-fit flex px-4 py-8 flex-col gap-10 items-center",
             ])}>
-                <Hero title="Welcome!" subTitle="I'm Haruki Kubo." />
+                <Hero subTitle="I'm Haruki Kubo.">
+                    <h1 className="text-5xl tracking-tighter sm:text-8xl">
+                        Welcome!
+                    </h1>
+                </Hero>
                 <div className={clsx([
                     "flex flex-col gap-3 max-w-screen-sm",
                     "text-lg text-center font-mplus font-normal tracking-wide",
