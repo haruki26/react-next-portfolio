@@ -97,7 +97,7 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
-                    <Button href="/works">
+                    <Button>
                         more
                     </Button>
                 </section>
@@ -110,7 +110,7 @@ const Page: React.FC = () => {
                             </div>
                         </Card>
                     </div>
-                    <Button href="/blog">
+                    <Button>
                         more
                     </Button>
                 </section>
