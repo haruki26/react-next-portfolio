@@ -7,12 +7,12 @@ type Props = {
 }
 
 const Article: React.FC<Props> = ({ html }) => {
-    console.log(html);
+
     return (
         <article className={clsx(
-            "w-full prose break-all md:prose-lg",
+            "w-full prose break-all md:prose-lg text-foreground prose-headings:text-foreground",
             "prose-pre:w-80 prose-pre:mx-auto xs:prose-pre:w-[480px] md:prose-pre:w-full",
-            "prose-code:overflow-x-scroll",
+            "prose-code:overflow-x-scroll dark:prose-teal dark:prose-strong:text-foreground",
         )}>
             {parser(html)}
         </article>
