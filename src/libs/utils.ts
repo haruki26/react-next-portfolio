@@ -15,3 +15,9 @@ dayjs.extend(timezone);
 export const formatDate = (date: string): string => {
     return dayjs(date).tz("Asia/Tokyo").format("YYYY-MM-DD");
 }
+
+export const formatPath = (path: string, toUpper: boolean = false): string => {
+    if (path === "/") return "Home";
+    const p = path.split("/")[1];
+    return toUpper ? p.charAt(0).toUpperCase() + p.slice(1) : p;
+}
