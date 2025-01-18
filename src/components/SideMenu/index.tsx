@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 import { cn } from "@/libs/utils";
@@ -57,14 +57,23 @@ const SideMenu: React.FC = () => {
         handleOpen();
     }
 
+    const handleClickOverlay = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (e.target === e.currentTarget) {
+            handleOpen();
+        }
+    }
+
     return (
         <div ref={target}>
             {shouldRender && (
-                <div className={cn(
-                    "w-full h-svh fixed top-0 left-0 z-10 bg-slate-700/40 flex",
-                    "transition-opacity duration-500 ease-in-out",
-                    isOpen ? "opacity-100" : "opacity-0"
-                )}>
+                <div 
+                    className={cn(
+                        "w-full h-svh fixed top-0 left-0 z-10 bg-slate-700/40 flex",
+                        "transition-opacity duration-500 ease-in-out",
+                        isOpen ? "opacity-100" : "opacity-0"
+                    )}
+                    onClick={handleClickOverlay}
+                >
                     <div className={cn(
                         "w-full max-w-md py-20 bg-background-end shadow-[5px_0_10px_0_rgba(34,34,34,0.2)]",
                         "flex flex-col justify-center items-center",
