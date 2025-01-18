@@ -16,7 +16,7 @@ const Page: React.FC = async () => {
     const cards = data.contents.map((content) => ({
         title: content.title,
         describe: content.describe,
-        link: `/works/${content.id}`,
+        link: `/blog/${content.id}`,
     }));
 
     return (
