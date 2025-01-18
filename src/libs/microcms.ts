@@ -39,4 +39,17 @@ export const getContents = async (
         queries,
     });
     return listData;
-}
+};
+
+export const getContentsDetail = async (
+    endpoint: EndPoint,
+    id: string,
+    queries?: MicroCMSQueries,
+) => {
+    const detailData = await client.getListDetail<Content>({
+        endpoint,
+        contentId: id,
+        queries,
+    });
+    return detailData;
+};
