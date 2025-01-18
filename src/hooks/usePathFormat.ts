@@ -1,4 +1,4 @@
-const paths = ["/", "/work", "/contact", "/blog", "/"];
+const paths = ["/", "/works", "/contact", "/blog"];
 
 export const usePathFormat = (path: string): string | null => {
     if (path === "/") return "/";
