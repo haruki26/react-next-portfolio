@@ -83,7 +83,7 @@ const SideMenu: React.FC = () => {
                             {pages.map((page, index) => (
                                 <label
                                     key={index}
-                                    className="grid grid-cols-subgrid col-span-2 row-span-1 gap-0"
+                                    className="cursor-pointer grid grid-cols-subgrid col-span-2 row-span-1 gap-0"
                                     onClick={() => handleClick(page.href)}
                                 >
                                     {page.icon.type({
