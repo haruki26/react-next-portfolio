@@ -4,10 +4,9 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { BiHome, BiBookBookmark, BiBookContent, BiEnvelope } from "react-icons/bi";
 
-import { cn } from "@/libs/utils";
+import { cn, formatPath } from "@/libs/utils";
 import IconAndStr from "../IconAndStr";
 import React from "react";
-import { usePathFormat } from "@/hooks/usePathFormat";
 
 
 const pages = [
@@ -51,7 +50,7 @@ const PageLinks: React.FC<Props> = ({
     withText = false,
     horizontal = false,
 }) => {
-    const current = usePathFormat(usePathname());
+    const current = formatPath(usePathname());
 
     return (
         <ul className={cn(
