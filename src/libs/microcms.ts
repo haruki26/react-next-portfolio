@@ -9,7 +9,7 @@ import type {
 export type Content = {
     title: string;
     describe: string;
-    content: string;
+    article: string;
     thumbnail?: MicroCMSImage | undefined;
     publishedAt: string;
     updatedAt: string;
