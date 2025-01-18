@@ -69,9 +69,10 @@ const SideMenu: React.FC = () => {
             {shouldRender && (
                 <div 
                     className={cn(
-                        "w-full h-svh fixed top-0 left-0 z-10 bg-slate-700/40 flex",
+                        "w-full h-svh fixed top-0 left-0 z-10 flex",
                         "transition-opacity duration-500 ease-in-out",
-                        isOpen ? "opacity-100" : "opacity-0"
+                        isOpen ? "opacity-100" : "opacity-0",
+                        "bg-slate-700/40 dark:bg-gray-300/20"
                     )}
                     onClick={handleClickOverlay}
                 >
