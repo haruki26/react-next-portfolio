@@ -54,6 +54,7 @@ const SideMenu: React.FC = () => {
 
     const handleClick = (href: string) => {
         router.push(href);
+        window.scrollTo({top: 0, behavior: "instant"});
         handleOpen();
     }
 
