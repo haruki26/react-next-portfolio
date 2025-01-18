@@ -1,8 +1,9 @@
 import CardStack from "@/components/CardStack";
 import { getContents } from "@/libs/microcms";
+import React from "react";
 
 
-const Page: React.FC = async () => {
+const Page = async () => {
     const data = await getContents("blog");
 
     if (data.contents.length === 0) {

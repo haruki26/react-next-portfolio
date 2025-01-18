@@ -8,7 +8,7 @@ type Props = {
     };
 };
 
-const Page: React.FC<Props> = async ({ params }) => {
+const Page = async ({ params }: Props) => {
     const data = await getContentsDetail("blog", params.slug);
 
     return (
