@@ -6,7 +6,7 @@ type Props = {
     html: string;
 }
 
-const ArticleRender: React.FC<Props> = ({ html }) => {
+const Article: React.FC<Props> = ({ html }) => {
     console.log(html);
     return (
         <article className={clsx(
@@ -19,4 +19,4 @@ const ArticleRender: React.FC<Props> = ({ html }) => {
     )
 }
 
-export default ArticleRender;
+export default Article;

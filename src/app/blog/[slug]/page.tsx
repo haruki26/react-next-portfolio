@@ -1,4 +1,4 @@
-import ArticleRender from "@/components/ArticleRender";
+import Article from "@/components/Article";
 import DateLabel from "@/components/DateLabel";
 import { getContentsDetail } from "@/libs/microcms";
 
@@ -22,7 +22,7 @@ const Page = async ({ params }: Props) => {
                 <p>{data.describe}</p>
             </div>
             <span className="inline-block w-full h-[0.7px] bg-slate-600 " />
-            <ArticleRender html={data.article} />
+            <Article html={data.article} />
             <div className="flex gap-4 mx-auto">
                 <span className="tracking-tight">最終更新日</span>
                 <DateLabel date={data.updatedAt} />
