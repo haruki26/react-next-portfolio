@@ -7,9 +7,9 @@ type Props = {
 
 const DateLabel: React.FC<Props> = ({ date }) => {
     return (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-center gap-1 h-fit">
             <IoTimeOutline size={"1.2rem"} />
-            <span>{formatDate(date)}</span>
+            <span className="text-md tracking-tighter pb-px">{formatDate(date)}</span>
         </div>
     );
 };
