@@ -3,7 +3,7 @@ import { getContents } from "@/libs/microcms";
 
 
 const Page: React.FC = async () => {
-    const data = await getContents("works");
+    const data = await getContents("blog");
 
     if (data.contents.length === 0) {
         return (
