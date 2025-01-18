@@ -3,10 +3,14 @@
 import HamburgerBtn from "../HamburgerBtn";
 import clsx from "clsx";
 import { useSideMenuContext } from "@/contexts";
+import MediaLinks from "../MediaLinks";
+import { usePathname } from "next/navigation";
+import { formatPath } from "@/libs/utils";
 
 
 const NavBar: React.FC = () => {
     const { isOpen, handleOpen } = useSideMenuContext();
+    const path = formatPath(usePathname(), true);
     
     return (
         <>
@@ -18,11 +22,9 @@ const NavBar: React.FC = () => {
             <div className="h-full flex justify-between items-center">
                 <div className="flex gap-4 items-center">
                     <HamburgerBtn isOpen={isOpen} handleOpen={handleOpen} />
-                    <span className="text-xl font-bold">My Portfolio</span>
+                    <span className="text-2xl font-roboto font-medium">{path}</span>
                 </div>
-                <div className="flex gap-4">
-                    <span className="text-lg font-bold">Link</span>
-                </div>
+                <MediaLinks />
             </div>
         </div>
         </>
