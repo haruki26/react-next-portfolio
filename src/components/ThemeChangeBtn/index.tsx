@@ -21,7 +21,7 @@ const ThemeChangeBtn: React.FC = () => {
             "p-px w-[71px] h-[34px] rounded-3xl relative",
             "border-2 border-spacing-1 border-amber-300 dark:border-amber-200"
         )}>
-            <label
+            <div
                 onClick={handleClick}
                 className={cn(
                     "cursor-pointer absolute top-[1px] left-[3px] w-full h-full z-10",

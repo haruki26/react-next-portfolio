@@ -26,9 +26,9 @@ const Button: React.FC<Props> = ({
                 className
             )}
         >
-            <label className="w-full h-full absolute top-0 left-0">
+            <div className="w-full h-full absolute top-0 left-0">
                 {children}
-            </label>
+            </div>
         </button>
     );
 }
