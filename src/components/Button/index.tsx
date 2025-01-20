@@ -1,29 +1,32 @@
-import clsx from "clsx";
-
+import { ButtonHTMLAttributes } from "react";
+import { cn } from "@/libs/utils";
 
 type Props = {
     children: React.ReactNode;
+    type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
     className?: string;
 }
 
-const Button: React.FC<Props> = ({ children, className }) => {
+const Button: React.FC<Props> = ({
+    children,
+    type = "button",
+    className,
+}) => {
     return (
         <button
-            type="button"
-            className={clsx(
+            type={type}
+            className={cn(
                 "h-16 w-52 bg-muted relative",
                 "before:w-full before:h-full before:absolute before:top-0 before:left-0",
                 "before:border-black before:border-[1.5px]",
                 "before:transform before:translate-x-[6px] before:-translate-y-[6px]",
                 "hover:before:translate-x-0 hover:before:translate-y-0",
                 "before:transition before:duration-300",
-                "dark:before:border-slate-300"
+                "dark:before:border-slate-300",
+                className
             )}
         >
-            <label className={clsx(
-                "w-full h-full absolute top-0 left-0",
-                className
-            )}>
+            <label className="w-full h-full absolute top-0 left-0">
                 {children}
             </label>
         </button>
