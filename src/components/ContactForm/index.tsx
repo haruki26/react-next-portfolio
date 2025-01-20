@@ -9,7 +9,7 @@ type LabelProps = {
     target: string;
 }
 
-const Label: React.FC<LabelProps> = ({ target }) => {
+const InputForm: React.FC<LabelProps> = ({ target }) => {
     const [inputValue, setInputValue] = useState("");
     const [isFocused, setIsFocused] = useState(false);
 
@@ -50,10 +50,20 @@ const ContactForm: React.FC = () => {
         )}>
             <div className="flex flex-col gap-5">
                 <div className="flex gap-3">
-                    <Label target="FirstName" />
-                    <Label target="LastName" />
+                    <InputForm target="FirstName" />
+                    <InputForm target="LastName" />
                 </div>
-                <Label target="eMail" />
+                <InputForm target="eMail" />
+                <div className="flex flex-col gap-0">
+                    <label htmlFor="message" className="font-roboto text-slate-600 text-md tracking-tight">
+                        Message
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        className="px-2 w-full h-24 border-b-2 bg-inherit border-slate-800 focus:bg-stone-300/75 focus:outline-none"
+                    />
+                </div>
                 <Button type="submit" className="w-32 h-12 mx-auto mt-7 before:translate-x-[4px] before:-translate-y-[4px]">
                     <div className="w-full h-full flex justify-center items-center">
                         <span className="font-roboto text-xl text-slate-200">Submit</span>
