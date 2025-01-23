@@ -36,7 +36,7 @@ const InputForm: React.FC<LabelProps> = ({ target }) => {
                 onChange={handleChange}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
-                className="px-2 w-full border-b-2 bg-inherit border-slate-800 focus:bg-stone-300/75 focus:outline-none"
+                className="px-2 w-full border-b-2 bg-inherit rounded-t border-slate-800 focus:bg-stone-300/75 focus:outline-none"
             />
         </div>
     );
@@ -47,6 +47,7 @@ const ContactForm: React.FC = () => {
         <form className={clsx(
             "mx-auto mb-2 w-80 h-fit rounded-lg p-5 bg-zinc-100/75 dark:bg-zinc-900/75",
             "shadow-lg shadow-slate-800/20 dark:shadow-slate-100/20",
+            "",
         )}>
             <div className="flex flex-col gap-5">
                 <div className="flex gap-3">
@@ -61,10 +62,10 @@ const ContactForm: React.FC = () => {
                     <textarea
                         id="message"
                         name="message"
-                        className="px-2 w-full h-24 border-b-2 bg-inherit border-slate-800 focus:bg-stone-300/75 focus:outline-none"
+                        className="px-2 w-full h-24 border-b-2 bg-inherit rounded-t border-slate-800 focus:bg-stone-300/75 focus:outline-none"
                     />
                 </div>
-                <Button type="submit" className="w-32 h-12 mx-auto mt-7 before:translate-x-[4px] before:-translate-y-[4px]">
+                <Button type="submit" className="w-32 h-12 mx-auto mt-5 mb-3 before:translate-x-[4px] before:-translate-y-[4px]">
                     <div className="w-full h-full flex justify-center items-center">
                         <span className="font-roboto text-xl text-slate-200">Submit</span>
                     </div>
