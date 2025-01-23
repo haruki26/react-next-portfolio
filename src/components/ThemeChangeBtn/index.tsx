@@ -4,17 +4,23 @@ import { useTheme } from "next-themes";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
 import { cn } from "@/libs/utils";
+import { useLayoutEffect, useState } from "react";
 
 
 const ThemeChangeBtn: React.FC = () => {
-    const { theme, setTheme } = useTheme();
-    const isDark = (theme === "dark");
+    const { resolvedTheme, setTheme } = useTheme();
+    const [isDark, setIsDark] = useState<boolean>();
+
+    useLayoutEffect(() => {
+        setIsDark(resolvedTheme === "dark");
+    }, [resolvedTheme]);
 
     const handleClick = () => {
-        setTheme(
-            isDark ? "light" : "dark"
-        );
+        setIsDark(!isDark);
+        setTheme(isDark ? "light" : "dark");
     }
+
+    console.log(isDark);
 
     return (
         <div className={cn(
