@@ -15,7 +15,7 @@ export type Content = {
     updatedAt: string;
 } & MicroCMSListContent;
 
-type EndPoint = "works" | "blog";
+export type EndPoint = "works" | "blog";
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
     throw new Error("MICROCMS_SERVICE_DOMAIN is not defined");
