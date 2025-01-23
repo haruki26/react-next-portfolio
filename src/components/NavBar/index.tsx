@@ -6,6 +6,7 @@ import { useSideMenuContext } from "@/contexts";
 import MediaLinks from "../MediaLinks";
 import { usePathname } from "next/navigation";
 import { formatPath } from "@/libs/utils";
+import ThemeChangeBtn from "../ThemeChangeBtn";
 
 
 const NavBar: React.FC = () => {
@@ -23,7 +24,7 @@ const NavBar: React.FC = () => {
                     <HamburgerBtn isOpen={isOpen} handleOpen={handleOpen} />
                     <span className="text-2xl font-roboto font-medium">{path}</span>
                 </div>
-                <MediaLinks />
+                <ThemeChangeBtn />
             </div>
         </div>
     );
