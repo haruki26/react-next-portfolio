@@ -22,3 +22,5 @@ export const PAGES = [
         href: "/contact",
     },
 ]
+
+export const TOP_ARTICLE_NUM = 3;
