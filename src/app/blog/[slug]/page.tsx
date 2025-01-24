@@ -1,5 +1,5 @@
+import { notFound } from "next/navigation";
 import Article from "@/components/Article";
-import DateLabel from "@/components/DateLabel";
 import { getContentsDetail } from "@/libs/microcms";
 
 type Props = {
@@ -9,26 +9,19 @@ type Props = {
 };
 
 const Page = async ({ params }: Props) => {
-    const data = await getContentsDetail("blog", params.slug);
+    const data = await getContentsDetail("blog", params.slug).catch(notFound);
 
     return (
-        <div className="mx-auto flex flex-col gap-10 font-mplus justify-center items-center max-w-screen-md">
-            <div className="flex flex-col gap-5">
-                <h1 className="text-3xl text-center font-bold">{data.title}</h1>
-                <div className="flex gap-4 mx-auto">
-                    <span className="tracking-tight">公開日</span>
-                    <DateLabel date={data.createdAt} />
-                </div>
-                <p>{data.describe}</p>
-            </div>
-            <span className="inline-block w-full h-[0.7px] bg-slate-600 " />
-            <Article html={data.article} />
-            <div className="flex gap-4 mx-auto">
-                <span className="tracking-tight">最終更新日</span>
-                <DateLabel date={data.updatedAt} />
-            </div>
-        </div>
-    )
-}
+        <Article
+            title={data.title}
+            describe={data.describe}
+            html={data.article}
+            date={{
+                createdAt: data.createdAt,
+                updatedAt: data.updatedAt,
+            }}
+        />
+    );
+};
 
 export default Page;
