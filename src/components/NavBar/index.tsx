@@ -1,9 +1,8 @@
 "use client";
 
-import HamburgerBtn from "../HamburgerBtn";
+import HamburgerBtn from "./HamburgerBtn";
 import clsx from "clsx";
 import { useSideMenuContext } from "@/contexts";
-import MediaLinks from "../MediaLinks";
 import { usePathname } from "next/navigation";
 import { formatPath } from "@/libs/utils";
 import ThemeChangeBtn from "../ThemeChangeBtn";
