@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import SideMenu from "@/components/SideMenu";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SideMenuProvider } from "@/components/sidemenu-provider";
+import TopBackBtn from "@/components/TopBackBtn";
 
 
 const roboto = Roboto_Serif({
@@ -49,14 +50,15 @@ export default function RootLayout({
                         <header className="sticky top-0 left-0 z-50">
                             <NavBar />
                         </header>
-                        <main className="h-fit px-2 py-3 relative overflow-x-hidden">
-                            {children}
-                        </main>
-                        <footer className="w-full h-fit mt-8 z-50">
-                            <Footer />
-                        </footer>
                         <SideMenu />
                     </SideMenuProvider>
+                    <main className="h-fit px-2 py-3 relative overflow-x-hidden">
+                        {children}
+                    </main>
+                    <footer className="w-full h-fit mt-8 z-50">
+                        <Footer />
+                    </footer>
+                    <TopBackBtn />
                 </ThemeProvider>
             </body>
         </html>
