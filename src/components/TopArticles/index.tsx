@@ -1,29 +1,40 @@
-import { EndPoint, getContents } from "@/libs/microcms";
+import Link from "next/link";
+
+import Button from "../Button";
 import CardStack from "../CardStack";
+import type { Content } from "@/libs/microcms";
 
 
 type Props = {
-    path: EndPoint;
+    contents: Content[];
+    articleType: "blog" | "works";
 }
 
-const TopArticles =  async ({ path }: Props) => {
-    const data = await getContents(
-        path, { limit: 3 }
-    );
-
-    if (data.contents.length === 0) {
-        return null;
-    }
-
-    const articles = data.contents.map((article) => ({
-        title: article.title,
-        describe: article.describe,
-        link: `/blog/${article.id}`,
+const TopArticles: React.FC<Props> = ({ contents, articleType }) => {
+    const articles = contents.map((content) => ({
+        title: content.title,
+        describe: content.describe,
+        link: `/${articleType}/${content.id}`,
     }))
 
     return (
-        <CardStack cardContents={articles} />
-    );
+        <>
+        {contents.length === 0
+            ? <p className="text-muted-foreground">No articles</p>
+            : <CardStack cardContents={articles} />
+        }
+        <Button>
+            <Link
+                href={`/${articleType}`}
+                className="w-full h-full flex items-center justify-center"
+            >
+                <span className="font-roboto text-xl text-muted-foreground font-light tracking-tighter">
+                    more
+                </span>
+            </Link>
+        </Button>
+        </>
+    )
 }
 
 export default TopArticles;
