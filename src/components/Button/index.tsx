@@ -5,12 +5,14 @@ type Props = {
     children: React.ReactNode;
     type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
     className?: string;
+    onClick?: () => void;
 }
 
 const Button: React.FC<Props> = ({
     children,
     type = "button",
     className,
+    onClick,
 }) => {
     return (
         <button
@@ -25,6 +27,7 @@ const Button: React.FC<Props> = ({
                 "dark:before:border-slate-300",
                 className
             )}
+            onClick={onClick}
         >
             <div className="w-full h-full absolute top-0 left-0">
                 {children}
