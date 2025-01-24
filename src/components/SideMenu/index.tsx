@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
-import { cn } from "@/libs/utils";
+import { cn, formatPath } from "@/libs/utils";
 import { useSideMenuContext } from "@/contexts";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { BiBookBookmark, BiBookContent, BiEnvelope, BiHome } from "react-icons/bi";
@@ -36,7 +36,9 @@ const SideMenu: React.FC = () => {
     const router = useRouter();
     const { isOpen, handleOpen } = useSideMenuContext();
     const [shouldRender, setShouldRender] = useState(isOpen);
+
     const target = useRef<HTMLDivElement>(null);
+    const path = formatPath(usePathname(), true);
 
     useEffect(() => {
         if (isOpen) {
@@ -83,17 +85,28 @@ const SideMenu: React.FC = () => {
                     )}>
                         <div className="w-fit grid grid-rows-4 grid-cols-2 gap-6 font-roboto mr-16">
                             {pages.map((page, index) => (
-                                <label
+                                <div
                                     key={index}
-                                    className="cursor-pointer grid grid-cols-subgrid col-span-2 row-span-1 gap-0"
-                                    onClick={() => handleClick(page.href)}
+                                    className="grid grid-cols-subgrid col-span-2 row-span-1 gap-0 pb-1 relative"
                                 >
+                                    <label
+                                        className={cn(
+                                            "absolute cursor-pointer top-0 left-16 bottom-0 right-0",
+                                            path === page.text && [
+                                                "after:animate-scale-in-center",
+                                                "after:w-full after:h-[1.2px] after:absolute after:bottom-0 after:left-0",
+                                                "after:bg-slate-800 after:shadow-[0_2px_5px_2px_rgba(0,0,0,0.13)]",
+                                                "dark:after:bg-gray-400 dark:after:shadow-[0_2px_6px_3px_rgba(220,220,220,0.25)]",
+                                            ],
+                                        )}
+                                        onClick={() => handleClick(page.href)}
+                                    />
                                     {page.icon.type({
                                         size: "3rem",
-                                        className: "fill-foreground mx-auto",
+                                        className: "fill-foreground mr-8 ml-auto",
                                     })}
-                                    <span className="text-4xl text-center pt-1">{page.text}</span>
-                                </label>
+                                    <span className="text-4xl text-center pt-1 pr-2">{page.text}</span>
+                                </div>
                             ))}
                         </div>
                     </div>
