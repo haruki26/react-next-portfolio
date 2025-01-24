@@ -1,18 +1,13 @@
-import Image from "next/image";
 import type { NextPage } from "next";
 
 import clsx from "clsx";
-import { LiaGrinSolid } from "react-icons/lia";
-import { BiLogoPython, BiLogoReact, BiLogoTypescript } from "react-icons/bi";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiLangchain } from "react-icons/si";
 
 import Card from "@/components/Card";
 import SectionTitle from "@/components/SectionTitle";
-import IconAndStr from "@/components/IconAndStr";
 import Button from "@/components/Button";
 import Hero from "@/components/Hero";
 import Link from "next/link";
+import SelfIntroduceCard from "@/components/SelfIntroduceCard";
 
 
 const Page: NextPage = () => {
@@ -53,45 +48,7 @@ const Page: NextPage = () => {
                 <section>
                     <div className="flex flex-col gap-5 items-center">
                         <SectionTitle title="About" />
-                        <Card>
-                            <div className="px-3 py-2 flex flex-col gap-1 items-center">
-                                <div className="w-full h-fit flex px-1 gap-4 items-center">
-                                    <Image
-                                        src={"/my_icon.svg"}
-                                        alt="icon" 
-                                        width={100}
-                                        height={100}
-                                        className="my-2 rounded-xl bg-zinc-300/80 w-20 dark:bg-zinc-200/90"
-                                    />
-                                    <div className="flex flex-col gap-2 items-start">
-                                        <IconAndStr>
-                                            <LiaGrinSolid
-                                                size="1.6rem"
-                                                className="mt-[0.1rem] inline fill-card-foreground"
-                                            />
-                                            <span className="text-2xl font-mplus tracking-tight">
-                                                久保 陽生
-                                            </span>
-                                        </IconAndStr>
-                                        <div className="flex gap-1 items-center">
-                                            <BiLogoTypescript size="1.9rem" className="inline fill-card-foreground" />
-                                            <BiLogoReact size="1.9rem" className="mt-[0.1rem] inline fill-card-foreground" />
-                                            <TbBrandNextjs size="1.9rem" className="inline stroke-icon" />
-                                            <BiLogoPython size="1.9rem" className="inline fill-card-foreground" />
-                                            <SiLangchain size="1.9rem" className="inline fill-card-foreground" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="w-full flex flex-col px-4 gap-0 items-start text-lg tracking-tight font-mplus">
-                                    <p>
-                                        PythonやWeb制作、AIについて
-                                        <br />
-                                        学んでいます。
-                                    </p>
-                                    <p>趣味はお菓子作りです。</p>
-                                </div>
-                            </div>
-                        </Card>
+                        <SelfIntroduceCard />
                     </div>
                 </section>
                 <section>
