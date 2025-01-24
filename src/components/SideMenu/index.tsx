@@ -6,31 +6,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { cn, formatPath } from "@/libs/utils";
 import { useSideMenuContext } from "@/contexts";
 import { useScrollLock } from "@/hooks/useScrollLock";
-import { BiBookBookmark, BiBookContent, BiEnvelope, BiHome } from "react-icons/bi";
+import { PAGES } from "@/constans";
 
-
-const pages = [
-    {
-        icon: <BiHome />,
-        text: "Home",
-        href: "/",
-    },
-    {
-        icon: <BiBookBookmark />,
-        text: "Works",
-        href: "/works",
-    },
-    {
-        icon: <BiBookContent />,
-        text: "Blog",
-        href: "/blog",
-    },
-    {
-        icon: <BiEnvelope />,
-        text: "Contact",
-        href: "/contact",
-    },
-]
 
 const SideMenu: React.FC = () => {
     const router = useRouter();
@@ -84,7 +61,7 @@ const SideMenu: React.FC = () => {
                         isOpen ? "animate-slide-in-left" : "animate-slide-out-left"
                     )}>
                         <div className="w-fit grid grid-rows-4 grid-cols-2 gap-6 font-roboto mr-16">
-                            {pages.map((page, index) => (
+                            {PAGES.map((page, index) => (
                                 <div
                                     key={index}
                                     className="grid grid-cols-subgrid col-span-2 row-span-1 gap-0 pb-1 relative"
