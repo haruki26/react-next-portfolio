@@ -1,6 +1,7 @@
+import type { NextPage } from "next";
 import ContactForm from "@/components/ContactForm";
 
-const Page = () => {
+const Page: NextPage = () => {
     return (
         <ContactForm />
     );

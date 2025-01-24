@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { NextPage } from "next";
 
 import clsx from "clsx";
 import { LiaGrinSolid } from "react-icons/lia";
@@ -14,7 +15,7 @@ import Hero from "@/components/Hero";
 import Link from "next/link";
 
 
-const Page: React.FC = () => {
+const Page: NextPage = () => {
     return (
         <div className="flex flex-col items-center">
             <div className={clsx([
