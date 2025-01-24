@@ -17,7 +17,7 @@ export const formatDate = (date: string): string => {
 }
 
 export const formatPath = (path: string, toUpper: boolean = false): string => {
-    if (path === "/") return "Home";
+    if (path === "/") return toUpper ? "Home" : "home";
     const p = path.split("/")[1];
     return toUpper ? p.charAt(0).toUpperCase() + p.slice(1) : p;
 }
