@@ -33,13 +33,14 @@ const TopBackBtn: React.FC = () => {
                 type="button"
                 onClick={() => toTop()}
                 className={clsx(
-                    "h-12 w-12 rounded-full bg-slate-700 shadow-xl shadow-slate-700/30 md:h-16 md:w-16",
+                    "h-12 w-12 md:h-16 md:w-16 rounded-full bg-slate-700 dark:bg-slate-500",
+                    "shadow-xl shadow-slate-700/30 dark:shadow-slate-300/20",
                     "transition duration-500 hover:scale-110 hover:-translate-y-1 "
                 )}
             >
                 <BiSolidArrowToTop
                     size={50}
-                    className="h-7 inline fill-slate-200 md:h-10"
+                    className="h-7 inline fill-slate-200 md:h-10 dark:fill-slate-100"
                 />
             </button>
         </div>
