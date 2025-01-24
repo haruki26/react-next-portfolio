@@ -20,7 +20,7 @@ const TopArticles: React.FC<Props> = ({ contents, articleType }) => {
     return (
         <>
         {contents.length === 0
-            ? <p className="text-muted-foreground">No articles</p>
+            ? <p className="text-foreground text-2xl font-mplus">No articles</p>
             : <CardStack cardContents={articles} />
         }
         <Button>
@@ -28,8 +28,8 @@ const TopArticles: React.FC<Props> = ({ contents, articleType }) => {
                 href={`/${articleType}`}
                 className="w-full h-full flex items-center justify-center"
             >
-                <span className="font-roboto text-xl text-muted-foreground font-light tracking-tighter">
-                    more
+                <span className="font-roboto text-2xl text-muted-foreground font-light tracking-tighter">
+                    All Posts
                 </span>
             </Link>
         </Button>
