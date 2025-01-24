@@ -32,7 +32,7 @@ const ThemeChangeBtn: React.FC = () => {
                 className={cn(
                     "cursor-pointer absolute top-[1px] left-[3px] w-full h-full z-10",
                     "after:inline-block after:w-[28px] after:h-[28px] after:rounded-full",
-                    "after:bg-amber-300/30 dark:after:bg-amber-200/30",
+                    "after:bg-amber-500/40 dark:after:bg-amber-200/30",
                     "after:transform after:transition after:duration-[400ms] after:ease-in-out",
                     isDark ? "after:translate-x-[34px]" : "after:translate-x-0",
                 )}
