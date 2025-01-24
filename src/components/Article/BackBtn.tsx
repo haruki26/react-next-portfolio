@@ -9,7 +9,7 @@ const BackBtn: React.FC = () => {
     return (
         <Button>
             <Link
-                onClick={() => toTop()}
+                onClick={() => toTop("instant")}
                 href="/blog"
                 className="w-full h-full flex items-center justify-center"
             >
