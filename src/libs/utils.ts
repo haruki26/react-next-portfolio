@@ -21,3 +21,10 @@ export const formatPath = (path: string, toUpper: boolean = false): string => {
     const p = path.split("/")[1];
     return toUpper ? p.charAt(0).toUpperCase() + p.slice(1) : p;
 }
+
+export const toTop = (behavior: "auto" | "smooth" = "smooth"): void => {
+    window.scrollTo({
+        top: 0,
+        behavior: behavior,
+    });
+}
