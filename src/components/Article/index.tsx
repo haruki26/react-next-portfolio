@@ -1,63 +1,43 @@
-import Image from "next/image";
+import BackBtn from "./BackBtn";
+import Content from "./Content";
+import DateLabel from "./DateLabel";
 
-import clsx from "clsx";
-import parser, { HTMLReactParserOptions, Element, Text } from "html-react-parser";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-
-
-const options: HTMLReactParserOptions = {
-    replace: (dom) => {
-        if (!(dom instanceof Element)) return;
-
-        if (dom.name === "pre") {
-            if (!(dom.firstChild instanceof Element)) return;
-            if (!(dom.firstChild.firstChild instanceof Text)) return;
-
-            return (
-                <SyntaxHighlighter
-                    language={dom.firstChild.attribs.class.replace("language-", "")}
-                    style={atomOneDark}
-                    customStyle={{
-                        padding: "1rem",
-                        overflowX: "scroll",
-                    }}
-                >
-                    {dom.firstChild.firstChild.data}
-                </SyntaxHighlighter>
-            )
-        } else if (dom.name === "image") {
-            const width = parseInt(dom.attribs.width);
-            const height = parseInt(dom.attribs.height);
-            if (isNaN(width) || isNaN(height)) return;
-            
-            return (
-                <Image
-                    src={dom.attribs.src}
-                    alt={dom.attribs.alt}
-                    width={width}
-                    height={height}
-                />
-            )
-        }
-    }
-}
 
 type Props = {
+    title: string;
+    describe: string;
     html: string;
+    date: {
+        createdAt: string;
+        updatedAt: string;
+    };
 }
 
-const Article: React.FC<Props> = ({ html }) => {
-    const parsedHtml = parser(html, options);
+const Article: React.FC<Props> = ({
+    title,
+    describe,
+    html,
+    date,
+}) => {
 
     return (
-        <article className={clsx(
-            "w-full prose break-all md:prose-lg text-foreground prose-headings:text-foreground",
-            "prose-pre:w-80 prose-pre:mx-auto xs:prose-pre:w-[480px] md:prose-pre:w-full",
-            "dark:prose-teal dark:prose-strong:text-foreground",
-        )}>
-            {parsedHtml}
-        </article>
+        <div className="mx-auto flex flex-col gap-10 font-mplus justify-center items-center max-w-screen-md">
+            <div className="flex flex-col gap-5">
+                <h1 className="text-3xl text-center font-bold">{title}</h1>
+                <div className="flex gap-4 mx-auto">
+                    <span className="tracking-tight">公開日</span>
+                    <DateLabel date={date.createdAt} />
+                </div>
+                <p>{describe}</p>
+            </div>
+            <span className="inline-block w-full h-[0.7px] bg-slate-600 " />
+            <Content html={html} />
+            <div className="flex gap-4 mx-auto">
+                <span className="tracking-tight">最終更新日</span>
+                <DateLabel date={date.updatedAt} />
+            </div>
+            <BackBtn />
+        </div>
     )
 }
 
