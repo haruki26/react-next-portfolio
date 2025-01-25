@@ -3,6 +3,7 @@ import type {
     MicroCMSQueries,
     MicroCMSImage,
     MicroCMSListContent,
+    MicroCMSListResponse,
 } from "microcms-js-sdk";
 
 
@@ -33,7 +34,7 @@ const client = createClient({
 export const getContents = async (
     endpoint: EndPoint,
     queries?: MicroCMSQueries,
-) => {
+): Promise<MicroCMSListResponse<Content>> => {
     const listData = await client.getList<Content>({
         endpoint,
         queries,
@@ -45,7 +46,7 @@ export const getContentsDetail = async (
     endpoint: EndPoint,
     id: string,
     queries?: MicroCMSQueries,
-) => {
+): Promise<Content> => {
     const detailData = await client.getListDetail<Content>({
         endpoint,
         contentId: id,
