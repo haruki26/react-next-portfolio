@@ -78,7 +78,6 @@ const ContactForm: React.FC = () => {
                 <ErrorMessage message={
                     errors.root?.message ? errors.root.message : null
                 }/>
-                <Loading />
             </form>
         )
     );
