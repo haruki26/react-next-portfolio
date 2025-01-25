@@ -5,7 +5,7 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 
 
 type Props = {
-    message?: string;
+    message: string | null;
 }
 
 const ErrorMessage: React.FC<Props> = ({ message }) => {
