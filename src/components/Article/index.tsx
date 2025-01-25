@@ -36,7 +36,6 @@ const Article: React.FC<Props> = ({
                 <span className="tracking-tight">最終更新日</span>
                 <DateLabel date={date.updatedAt} />
             </div>
-            <BackBtn />
         </div>
     )
 }
