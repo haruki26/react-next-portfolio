@@ -1,9 +1,9 @@
-import CardStack from "@/components/CardStack";
 import { getContents } from "@/libs/microcms";
-import React from "react";
+import type { AsyncPage } from "@/types";
+import CardStack from "@/components/CardStack";
 
 
-const Page = async () => {
+const Page: AsyncPage = async () => {
     const data = await getContents("blog");
 
     if (data.contents.length === 0) {

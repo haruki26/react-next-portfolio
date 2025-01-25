@@ -1,16 +1,17 @@
 import clsx from "clsx";
 
+import { getContents } from "@/libs/microcms";
+import { TOP_ARTICLE_NUM } from "@/constans";
+import type { AsyncPage } from "@/types";
 import SectionTitle from "@/components/SectionTitle";
 import Hero from "@/components/Hero";
 import SelfIntroduceCard from "@/components/SelfIntroduceCard";
-import { getContents } from "@/libs/microcms";
-import { TOP_ARTICLE_NUM } from "@/constans";
 import TopArticles from "@/components/TopArticles";
 
 
-const Page = async () => {
-    const worksData = await getContents("works", { limit: TOP_ARTICLE_NUM});
-    const blogData = await getContents("blog", { limit: TOP_ARTICLE_NUM});
+const Page: AsyncPage = async () => {
+    const worksData = await getContents("works", { limit: TOP_ARTICLE_NUM });
+    const blogData = await getContents("blog", { limit: TOP_ARTICLE_NUM });
 
     return (
         <div className="flex flex-col items-center">

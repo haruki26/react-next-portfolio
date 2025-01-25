@@ -1,8 +1,9 @@
-import CardStack from "@/components/CardStack";
 import { getContents } from "@/libs/microcms";
+import type { AsyncPage } from "@/types";
+import CardStack from "@/components/CardStack";
 
 
-const Page = async () => {
+const Page: AsyncPage = async () => {
     const data = await getContents("works");
 
     if (data.contents.length === 0) {

@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
-import Article from "@/components/Article";
+
 import { getContentsDetail } from "@/libs/microcms";
+import type { AsyncPage } from "@/types";
+import Article from "@/components/Article";
+
 
 type Props = {
     params: {
@@ -8,7 +11,7 @@ type Props = {
     };
 };
 
-const Page = async ({ params }: Props) => {
+const Page: AsyncPage<Props> = async ({ params }) => {
     const data = await getContentsDetail("blog", params.slug).catch(notFound);
 
     return (
