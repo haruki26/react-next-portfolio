@@ -50,7 +50,7 @@ export const createContact = async (
     } catch (error) {
         return {
             status: "error",
-            message: "お問い合わせに失敗しました",
+            message: "お問い合わせの送信に失敗しました",
         }
     }
     return {
