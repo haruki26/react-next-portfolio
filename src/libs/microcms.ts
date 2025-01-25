@@ -51,6 +51,9 @@ export const getContentsDetail = async (
         endpoint,
         contentId: id,
         queries,
+        customRequestInit: {
+            cache: "no-cache",
+        }
     });
     return detailData;
 };
