@@ -58,7 +58,7 @@ const Input: React.FC<Props> = ({
                     "focus:bg-stone-300/75 focus:outline-none dark:focus:bg-stone-700/75",
                 )}
             />
-            <ErrorMessage message={fieldError?.message} />
+            <ErrorMessage message={fieldError?.message ? fieldError.message : null} />
         </div>
     );
 };

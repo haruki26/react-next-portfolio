@@ -54,7 +54,7 @@ const TextArea: React.FC<Props> = ({ register, fieldError }) => {
                     "md:h-40"
                 )}
             />
-            <ErrorMessage message={fieldError?.message} />
+            <ErrorMessage message={fieldError?.message ? fieldError.message : null} />
         </div>
     );
 };
