@@ -34,3 +34,27 @@
     @apply bg-gradient-to-b from-background-start to-background-end text-foreground;
   }
 }
+
+@layer utilities {
+  .animation-delay-125 {
+    animation-delay: 125ms;
+  }
+  .animation-delay-250 {
+    animation-delay: 250ms;
+  }
+  .animation-delay-375 {
+    animation-delay: 375ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-625 {
+    animation-delay: 625ms;
+  }
+  .animation-delay-750 {
+    animation-delay: 750ms;
+  }
+  .animation-delay-875 {
+    animation-delay: 875ms;
+  }
+}
