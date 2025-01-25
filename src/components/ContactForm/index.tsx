@@ -1,29 +1,28 @@
 "use client";
 
 import clsx from "clsx";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { contactFormSchema, ContactFormSchema } from "@/validation/schema/ContactFormSchema";
+import { createContact } from "@/validation/actoin/contact";
+import ErrorMessage from "./ErrorMessage";
 import Button from "../Button";
 import Input from "./Input";
 import TextArea from "./TextArea";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { contactFormSchema, ContactFormSchema } from "@/validation/schema/ContactFormSchema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { createContact } from "@/validation/actoin/contact";
-import ErrorMessage from "./ErrorMessage";
-import React, { useState } from "react";
 import Success from "./Success";
-import Link from "next/link";
-
-type Status = {
-    state: "pending" | "success" | "error";
-    message: string;
-}
-
+import Loading from "../Loading";
 
 const ContactForm: React.FC = () => {
     const {
         register,
         handleSubmit,
-        formState: { errors, isLoading, isSubmitSuccessful },
+        formState: {
+            errors,
+            isLoading,
+            isSubmitting,
+            isSubmitSuccessful,
+        },
         setError,
         reset,
     } = useForm<ContactFormSchema>(
@@ -68,13 +67,18 @@ const ContactForm: React.FC = () => {
                     <TextArea register={register("message")} fieldError={errors.message} />
                     <Button type="submit" className="w-32 h-12 mx-auto mt-5 mb-3 before:translate-x-[4px] before:-translate-y-[4px]">
                         <div className="w-full h-full flex justify-center items-center">
-                            <span className="font-roboto text-xl text-slate-200">Submit</span>
+                            {(isSubmitting || isLoading) ? (
+                                <Loading />
+                            ) : (
+                                <span className="font-roboto text-xl text-slate-200">Submit</span>
+                            )}
                         </div>
                     </Button>
                 </div>
                 <ErrorMessage message={
                     errors.root?.message ? errors.root.message : null
                 }/>
+                <Loading />
             </form>
         )
     );
