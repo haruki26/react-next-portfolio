@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getContentsDetail } from "@/libs/microcms";
 import type { AsyncPage } from "@/types";
 import Article from "@/components/Article";
+import BackBtn from "@/components/Article/BackBtn";
 
 
 type Props = {
@@ -15,15 +16,19 @@ const Page: AsyncPage<Props> = async ({ params }) => {
     const data = await getContentsDetail("blog", params.slug).catch(notFound);
 
     return (
-        <Article
-            title={data.title}
-            describe={data.describe}
-            html={data.article}
-            date={{
-                createdAt: data.createdAt,
-                updatedAt: data.updatedAt,
-            }}
-        />
+        <div className="flex flex-col items-center gap-10">
+            <Article
+                title={data.title}
+                describe={data.describe}
+                html={data.article}
+                date={{
+                    createdAt: data.createdAt,
+                    updatedAt: data.updatedAt,
+                }}
+            />
+            <BackBtn href="blog" />
+        </div>
+        
     );
 };
 
