@@ -38,6 +38,7 @@ const config: Config = {
         "fade-in-bottom": "fade-in-bottom 1.5s ease-in-out both",
         "slide-in-left": "slide-in-left 0.5s ease-in-out both",
         "slide-out-left": "slide-out-left 0.5s ease-in-out both",
+        "switch-scaling": "switch-scaling 1s ease-in-out infinite",
       },
       keyframes: {
         "floating-slow": {
@@ -82,6 +83,24 @@ const config: Config = {
           },
           "100%": {
             transform: "translateX(-100%)",
+          },
+        },
+        "switch-scaling": {
+          "0%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "33%": {
+            opacity: "0.33",
+            transform: "scale(0.5)",
+          },
+          "66%": {
+            opacity: "0.66",
+            transform: "scale(1.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
           },
         },
       },
