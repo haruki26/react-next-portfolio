@@ -16,14 +16,14 @@ type Props = {
 }
 
 const CardStack: React.FC<Props> = ({ cardContents }) => {
-    const cl = cardContents.length;
-    const rowSpan = (cl % 2 == 0 ? cl : cl + 1) * 3;
+    const rowSpan = cardContents.length * 3;
+    const mdRowSpan = (rowSpan % 2 == 0 ? rowSpan : rowSpan + 3) / 2;
 
     return (
         <div className={cn(
             "grid grid-rows-9 py-5",
             `grid-cols-1 grid-rows-[repeat(${rowSpan},minmax(0,1fr))] gap-10`,
-            `md:grid-cols-2 md:grid-rows-[repeat(${rowSpan/2},minmax(0,1fr))]`,
+            `md:grid-cols-2 md:grid-rows-[repeat(${mdRowSpan},minmax(0,1fr))]`,
         )}>
             {cardContents.map((content, index) => (
                 <Card key={index} className={clsx(
