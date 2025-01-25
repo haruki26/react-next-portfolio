@@ -39,6 +39,15 @@ const options: HTMLReactParserOptions = {
                     height={height}
                 />
             )
+        } else if (dom.name === "code") {
+            if (!(dom.firstChild instanceof Text)) return;
+            return (
+                <code className={clsx(
+                    "bg-gray-800 dark:bg-gray-600 text-white p-1 rounded-md after:hidden before:hidden",
+                )}>
+                    {dom.firstChild.data}
+                </code>
+            )
         }
     }
 }
