@@ -18,9 +18,7 @@ const ThemeChangeBtn: React.FC = () => {
     const handleClick = () => {
         setIsDark(!isDark);
         setTheme(isDark ? "light" : "dark");
-    }
-
-    if (isDark === undefined) return <div className="w-[71px] h-[34px] border-1"></div>;
+    };
 
     return (
         <div className={cn(
