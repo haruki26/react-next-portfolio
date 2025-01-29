@@ -59,7 +59,7 @@ export default function RootLayout({
                         </header>
                         <SideMenu />
                     </SideMenuProvider>
-                    <main className="h-fit px-2 py-3 grow">
+                    <main className="h-fit px-2 py-3 grow flex flex-col">
                         {children}
                     </main>
                     <footer className="w-full h-fit pt-8">

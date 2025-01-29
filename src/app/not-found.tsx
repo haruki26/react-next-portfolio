@@ -4,7 +4,7 @@ import { NextPage } from "next";
 
 const NotFound: NextPage = () => {
     return (
-        <div className="w-full h-full flex flex-col items-center justify-center">
+        <div className="w-full h-full my-auto flex flex-col items-center justify-center">
             <div className="flex flex-col items-center gap-5 py-10">
                 <h1 className="text-3xl font-roboto font-bold md:text-5xl">
                     404 Not Found
