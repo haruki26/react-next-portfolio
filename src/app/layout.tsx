@@ -59,10 +59,10 @@ export default function RootLayout({
                         </header>
                         <SideMenu />
                     </SideMenuProvider>
-                    <main className="h-fit px-2 py-3 z-0">
+                    <main className="h-fit px-2 py-3">
                         {children}
                     </main>
-                    <footer className="w-full h-fit mt-8 z-50">
+                    <footer className="w-full h-fit pt-8">
                         <Footer />
                     </footer>
                     <TopBackBtn />
