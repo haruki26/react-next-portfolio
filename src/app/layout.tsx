@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <body className={`${roboto.variable} ${mplus.variable} h-full w-full m-0`}>
+            <body className={`${roboto.variable} ${mplus.variable} h-dvh w-full m-0 flex flex-col`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
@@ -59,7 +59,7 @@ export default function RootLayout({
                         </header>
                         <SideMenu />
                     </SideMenuProvider>
-                    <main className="h-fit px-2 py-3">
+                    <main className="h-fit px-2 py-3 grow">
                         {children}
                     </main>
                     <footer className="w-full h-fit pt-8">
