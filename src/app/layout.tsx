@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <body className={`${roboto.variable} ${mplus.variable} h-dvh w-full m-0 flex flex-col`}>
+            <body className={`${roboto.variable} ${mplus.variable} h-full min-h-dvh w-full m-0 flex flex-col`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
