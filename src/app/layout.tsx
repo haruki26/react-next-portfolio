@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         title: "Haruki's Portfolio",
         description: "ポートフォリオサイトです。今までの作品や学びをブログ形式でまとめています。",
         locale: "ja_JP",
-        url: "https://haruki.dev",
+        url: "https://react-next-portfolio-iota.vercel.app/",
         siteName: "Haruki's Portfolio",
     }
 };
