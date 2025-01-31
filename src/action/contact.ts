@@ -1,6 +1,6 @@
 "use server";
 
-import { ContactFormSchema } from "../schema/ContactFormSchema";
+import { ContactFormSchema } from "@/validation/schema/ContactFormSchema";
 
 type Return = {
     status: "success" | "error";
