@@ -46,9 +46,9 @@ const Page: AsyncPage = async () => {
                     ])} />
                 </div>
             </div>
-            <div className="mt-10 w-full flex flex-col gap-10 justify-center">
+            <div className="mt-10 w-full flex flex-col gap-10 justify-center md:gap-20">
                 <section>
-                    <div className="flex flex-col gap-5 items-center">
+                    <div className="flex flex-col gap-5 items-center md:gap-10">
                         <SectionTitle title="About" />
                         <SelfIntroduceCard />
                     </div>
