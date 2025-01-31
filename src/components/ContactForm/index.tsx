@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { contactFormSchema, ContactFormSchema } from "@/validation/schema/ContactFormSchema";
-import { createContact } from "@/validation/actoin/contact";
+import { createContact } from "@/action/contact";
 import ErrorMessage from "./ErrorMessage";
 import Button from "../Button";
 import Input from "./Input";
