@@ -99,14 +99,14 @@ const Page: React.FC = () => {
                                     alt="tart"
                                     width={1024}
                                     height={1024}
-                                    className="rounded-xl h-40 w-40"
+                                    className="rounded-xl h-32 w-32 sm:h-40 sm:w-40"
                                 />
                                 <Image
                                     src={"/bushdenoel.webp"}
                                     alt="bushdenoel"
                                     width={961}
                                     height={961}
-                                    className="rounded-xl h-40 w-40"
+                                    className="rounded-xl h-32 w-32 sm:h-40 sm:w-40"
                                 />
                             </div>
                         </Card>
