@@ -13,7 +13,7 @@ const SectionTitle: React.FC<Props> = ({ title }) => {
             "after:inline-block after:h-[0.4px] after:w-[1.2rem] after:bg-black  after:ml-3 after:mt-[0.12rem]",
             "dark:before:bg-white dark:after:bg-white",
         )}>
-            <span className="font-roboto text-3xl font-medium tracking-tighter">
+            <span className="font-roboto text-3xl font-medium tracking-tighter md:text-5xl">
                 {title}
             </span>
         </h2>
