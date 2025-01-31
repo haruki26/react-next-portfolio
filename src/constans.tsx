@@ -1,10 +1,16 @@
 import { BiBookBookmark, BiBookContent, BiEnvelope, BiHome } from "react-icons/bi";
+import { LiaGrinSolid } from "react-icons/lia";
 
 export const PAGES = [
     {
         icon: <BiHome />,
         text: "Home",
         href: "/",
+    },
+    {
+        icon: <LiaGrinSolid />,
+        text: "About",
+        href: "/about",
     },
     {
         icon: <BiBookBookmark />,
