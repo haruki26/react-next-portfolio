@@ -17,8 +17,8 @@ const BackBtn: React.FC<Props> = ({ href }) => {
                 href={`/${href}`}
                 className="w-full h-full flex items-center justify-center"
             >
-                <span className="font-mplus text-xl text-muted-foreground font-light tracking-tighter">
-                    記事一覧へ
+                <span className="font-roboto text-xl text-muted-foreground font-light tracking-tighter">
+                    All Posts
                 </span>
             </Link>
         </Button>
