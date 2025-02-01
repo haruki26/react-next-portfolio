@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getContentsDetail } from "@/libs/microcms";
@@ -9,6 +10,19 @@ import BackBtn from "@/components/Article/BackBtn";
 type Props = {
     params: {
         slug: string;
+    };
+};
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+    const data = await getContentsDetail("blog", params.slug);
+
+    return {
+        title: data.title,
+        description: data.describe,
+        openGraph: {
+            title: data.title,
+            description: data.describe,
+        },
     };
 };
 
