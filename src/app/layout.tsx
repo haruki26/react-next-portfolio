@@ -28,7 +28,10 @@ const mplus = M_PLUS_1p({
 });
 
 export const metadata: Metadata = {
-    title: "Haruki's Portfolio",
+    title: {
+        default: "Haruki's Portfolio",
+        template: `%s | Haruki's Portfolio`,
+    },
     description: "ポートフォリオサイトです。今までの作品や学びをブログ形式でまとめています。",
     openGraph: {
         title: "Haruki's Portfolio",
