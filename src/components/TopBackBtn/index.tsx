@@ -37,6 +37,7 @@ const TopBackBtn: React.FC = () => {
                     "shadow-xl shadow-slate-700/30 dark:shadow-slate-300/20",
                     "transition duration-500 hover:scale-110 hover:-translate-y-1 "
                 )}
+                disabled={!isVisible}
             >
                 <BiSolidArrowToTop
                     size={50}
