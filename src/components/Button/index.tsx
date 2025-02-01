@@ -35,7 +35,7 @@ const Button: React.FC<Props> = ({
             )}
             onClick={onClick}
         >
-            <div className="w-full h-full absolute top-0 left-0">
+            <div className="w-full h-full absolute top-0 left-0 z-10">
                 {children}
             </div>
         </button>
