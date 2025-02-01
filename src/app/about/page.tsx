@@ -1,12 +1,15 @@
 import Image from "next/image";
-import IconAndStr from "@/components/IconAndStr";
+
 import { LiaAddressCardSolid } from "react-icons/lia";
 import { PiCakeLight } from "react-icons/pi";
 import { TbBrandNextjs, TbUserHeart } from "react-icons/tb";
-import SectionTitle from "@/components/SectionTitle";
 import { BiLogoPython, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi";
 import { SiLangchain } from "react-icons/si";
+
+import IconAndStr from "@/components/IconAndStr";
+import SectionTitle from "@/components/SectionTitle";
 import Card from "@/components/Card";
+
 
 const Page: React.FC = () => {
     return (
