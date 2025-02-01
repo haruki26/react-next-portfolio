@@ -7,6 +7,9 @@ import { TbBrandNextjs } from "react-icons/tb"
 
 import Card from "../Card"
 import IconAndStr from "../IconAndStr"
+import clsx from "clsx"
+import Link from "next/link"
+import Arrow from "../Arrow"
 
 
 const SelfIntroduceCard: React.FC = () => {
@@ -48,6 +51,14 @@ const SelfIntroduceCard: React.FC = () => {
                     </p>
                     <p>趣味はお菓子作りです。</p>
                 </div>
+                <Link href="/about" className={clsx(
+                        "ml-auto pl-2 pr-3 py-0 pb-1",
+                        "border-2 border-muted rounded-md",
+                    )}>
+                    <Arrow>
+                        <span className="text-xl">more</span>
+                    </Arrow>
+                </Link>
             </div>
         </Card>
     )
