@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import { cn, formatPath } from "@/libs/utils";
-import { useSideMenuContext } from "@/contexts";
 import { useScrollLock } from "@/hooks/useScrollLock";
+import { useSideMenuContext } from "@/contexts";
 import { PAGES } from "@/constans";
 
 

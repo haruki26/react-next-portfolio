@@ -1,10 +1,10 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useLayoutEffect, useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
 import { cn } from "@/libs/utils";
-import { useLayoutEffect, useState } from "react";
 
 
 const ThemeChangeBtn: React.FC = () => {

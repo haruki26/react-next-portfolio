@@ -1,8 +1,9 @@
+import Link from "next/link";
+
 import { cn } from "@/libs/utils";
 
-import MediaLinks from "../MediaLinks";
 import { PAGES } from "@/constans";
-import Link from "next/link";
+import MediaLinks from "../MediaLinks";
 
 
 const Footer: React.FC = () => {

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
+import type { Content } from "@/libs/microcms";
 import Button from "../Button";
 import CardStack from "../CardStack";
-import type { Content } from "@/libs/microcms";
 
 
 type Props = {

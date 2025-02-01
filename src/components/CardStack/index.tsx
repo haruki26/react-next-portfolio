@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Card from "../Card";
-import clsx from "clsx";
 import { cn } from "@/libs/utils";
 import Arrow from "../Arrow";
+import Card from "../Card";
 
 
 type Content = {
@@ -26,17 +25,12 @@ const CardStack: React.FC<Props> = ({ cardContents }) => {
             `md:grid-cols-2 md:grid-rows-[repeat(${mdRowSpan},minmax(0,1fr))]`,
         )}>
             {cardContents.map((content, index) => (
-                <Card key={index} className={clsx(
-                    "px-2 py-3 grid grid-rows-subgrid row-span-3 max-w-72 gap-4",
-                )}>
+                <Card key={index} className="px-2 py-3 grid grid-rows-subgrid row-span-3 max-w-72 gap-4">
                     <h3 className="font-mplus text-2xl">{content.title}</h3>
                     <div className="flex gap-0 px-2">
                         <p className="text-xl break-all">{content.describe}</p>
                     </div>
-                    <Link href={content.link} className={clsx(
-                        "ml-auto pl-2 pr-3 py-0 pb-1",
-                        "border-2 border-muted rounded-md",
-                    )}>
+                    <Link href={content.link} className="ml-auto pl-2 pr-3 py-0 pb-1 border-2 border-muted rounded-md">
                         <Arrow>
                             <span className="text-xl">more</span>
                         </Arrow>

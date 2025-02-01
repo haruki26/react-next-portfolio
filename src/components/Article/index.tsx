@@ -1,4 +1,3 @@
-import BackBtn from "./BackBtn";
 import Content from "./Content";
 import DateLabel from "./DateLabel";
 

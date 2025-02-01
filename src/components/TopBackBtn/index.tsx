@@ -2,9 +2,9 @@
 
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import { BiSolidArrowToTop } from "react-icons/bi";
 
 import { toTop } from "@/libs/utils";
-import { BiSolidArrowToTop } from "react-icons/bi";
 
 
 const TopBackBtn: React.FC = () => {

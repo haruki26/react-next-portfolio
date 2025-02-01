@@ -1,10 +1,12 @@
 "use client";
 
-import { ContactFormSchema } from "@/validation/schema/ContactFormSchema";
 import clsx from "clsx";
 import React, { useState } from "react";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
+
+import { ContactFormSchema } from "@/validation/schema/ContactFormSchema";
 import ErrorMessage from "./ErrorMessage";
+
 
 type Props = {
     register: UseFormRegisterReturn<keyof ContactFormSchema>;

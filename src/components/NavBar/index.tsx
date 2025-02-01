@@ -13,7 +13,6 @@ const NavBar: React.FC = () => {
     const { isOpen, handleOpen } = useSideMenuContext();
     const path = formatPath(usePathname(), true);
     const pageName = PAGES.find((page) => page.text === path)?.text || "Not Found";
-
     
     return (
         <div className={clsx([
