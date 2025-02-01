@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import { BiBookBookmark } from "react-icons/bi";
 import Hero from "@/components/Hero";
 import IconAndStr from "@/components/IconAndStr";
 
+
+export const metadata = {
+    title: "Blog",
+};
 
 type Props = {
     children: React.ReactNode;

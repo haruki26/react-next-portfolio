@@ -1,8 +1,12 @@
+import type { Metadata } from "next";
 import { LiaGrinSolid } from "react-icons/lia";
 import Hero from "@/components/Hero";
 import IconAndStr from "@/components/IconAndStr";
 
 
+export const metadata: Metadata = {
+    title: "About",
+}
 
 type Props = {
     children: React.ReactNode;
