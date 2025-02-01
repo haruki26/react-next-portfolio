@@ -1,16 +1,19 @@
 "use client";
 
-import HamburgerBtn from "./HamburgerBtn";
 import clsx from "clsx";
-import { useSideMenuContext } from "@/contexts";
 import { usePathname } from "next/navigation";
 import { formatPath } from "@/libs/utils";
+import { useSideMenuContext } from "@/contexts";
+import { PAGES } from "@/constans";
+import HamburgerBtn from "./HamburgerBtn";
 import ThemeChangeBtn from "../ThemeChangeBtn";
 
 
 const NavBar: React.FC = () => {
     const { isOpen, handleOpen } = useSideMenuContext();
     const path = formatPath(usePathname(), true);
+    const pageName = PAGES.find((page) => page.text === path)?.text || "Not Found";
+
     
     return (
         <div className={clsx([
@@ -21,7 +24,7 @@ const NavBar: React.FC = () => {
             <div className="h-full flex justify-between items-center">
                 <div className="flex gap-4 items-center">
                     <HamburgerBtn isOpen={isOpen} handleOpen={handleOpen} />
-                    <span className="text-2xl font-roboto font-medium">{path}</span>
+                    <span className="text-2xl font-roboto font-medium">{pageName}</span>
                 </div>
                 <ThemeChangeBtn />
             </div>
