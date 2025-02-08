@@ -27,7 +27,7 @@ const CardStack: React.FC<Props> = ({ cardContents }) => {
             {cardContents.map((content, index) => (
                 <Card key={index} className="p-5 grid grid-rows-subgrid row-span-3 max-w-72 gap-4">
                     <h3 className="font-mplus text-2xl">{content.title}</h3>
-                    <div className="flex gap-0 px-2">
+                    <div className="flex gap-0">
                         <p className="text-xl break-all">{content.describe}</p>
                     </div>
                     <Link href={content.link} className="ml-auto pl-2 pr-3 py-0 pb-1 border-2 border-muted rounded-md">
