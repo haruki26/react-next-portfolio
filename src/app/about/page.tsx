@@ -16,7 +16,7 @@ const Page: React.FC = () => {
         <div className="flex flex-col gap-10 items-center justify-center">
             <section>
                 <div className="flex flex-col gap-10 items-center md:gap-16">
-                    <SectionTitle title="Profiel" />
+                    <SectionTitle title="Profile" />
                     <div className="flex sm:gap-20 justify-center items-center">
                         <Image
                             src={"/avatar.png"}
