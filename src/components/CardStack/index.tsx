@@ -25,7 +25,7 @@ const CardStack: React.FC<Props> = ({ cardContents }) => {
             `md:grid-cols-2 md:grid-rows-[repeat(${mdRowSpan},minmax(0,1fr))]`,
         )}>
             {cardContents.map((content, index) => (
-                <Card key={index} className="px-2 py-3 grid grid-rows-subgrid row-span-3 max-w-72 gap-4">
+                <Card key={index} className="p-5 grid grid-rows-subgrid row-span-3 max-w-72 gap-4">
                     <h3 className="font-mplus text-2xl">{content.title}</h3>
                     <div className="flex gap-0 px-2">
                         <p className="text-xl break-all">{content.describe}</p>
