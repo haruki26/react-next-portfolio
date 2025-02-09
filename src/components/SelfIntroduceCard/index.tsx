@@ -14,7 +14,7 @@ import Arrow from "../Arrow"
 const SelfIntroduceCard: React.FC = () => {
     return (
         <Card>
-            <div className="px-3 py-2 flex flex-col gap-1 items-center">
+            <div className="p-4 flex flex-col gap-3 items-center">
                 <div className="w-full h-fit flex px-1 gap-4 items-center">
                     <Image
                         src={"/my_icon.svg"}
