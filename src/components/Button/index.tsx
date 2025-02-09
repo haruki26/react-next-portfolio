@@ -25,7 +25,7 @@ const Button: React.FC<Props> = ({
                 "hover:before:translate-x-0 hover:before:translate-y-0",
                 "before:transition before:duration-300",
                 "dark:before:border-slate-300",
-                "after:w-full after:h-full after:absolute after:top-0 after:left-0",
+                "after:w-full after:h-full after:absolute after:top-0 after:left-0 after:-z-10",
                 "after:border-black after:border-[1.5px]",
                 "after:transform after:translate-x-[-3px] after:-translate-y-[-3px]",
                 "hover:after:translate-x-0 hover:after:translate-y-0",
@@ -35,7 +35,7 @@ const Button: React.FC<Props> = ({
             )}
             onClick={onClick}
         >
-            <div className="w-full h-full absolute top-0 left-0 z-10">
+            <div className="w-full h-full absolute top-0 left-0">
                 {children}
             </div>
         </button>
