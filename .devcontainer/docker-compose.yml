@@ -1,0 +1,17 @@
+version: '1.0'
+services:
+  portfolio-dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      network: host
+      args:
+        - USER_ID=1000
+        - GROUP_ID=1000
+    volumes:
+      - ..:/app:cached
+      - /app/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    user: vscode
+    ports: 
+      - "3000:3000"
